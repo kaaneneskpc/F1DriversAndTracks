@@ -20,15 +20,31 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import coil.compose.AsyncImage
 import com.example.f1drivers.domain.model.News
+import androidx.compose.material.ExperimentalMaterialApi
+import androidx.compose.material.pullrefresh.PullRefreshIndicator
+import androidx.compose.material.pullrefresh.pullRefresh
+import androidx.compose.material.pullrefresh.rememberPullRefreshState
 
+@OptIn(ExperimentalMaterialApi::class)
 @Composable
 fun NewsScreen(
     viewModel: NewsViewModel = hiltViewModel(),
     onNewsClick: (String) -> Unit
 ) {
     val newsState by viewModel.newsState.collectAsState()
+    val isRefreshing by viewModel.isRefreshing.collectAsState()
+    val pullRefreshState = rememberPullRefreshState(
+        refreshing = isRefreshing,
+        onRefresh = viewModel::refreshNews,
+        refreshThreshold = 120.dp,
+        refreshingOffset = 80.dp
+    )
 
-    Box(modifier = Modifier.fillMaxSize()) {
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .pullRefresh(pullRefreshState)
+    ) {
         when (val state = newsState) {
             is NewsState.Loading -> {
                 CircularProgressIndicator(
@@ -62,6 +78,15 @@ fun NewsScreen(
                 }
             }
         }
+
+        PullRefreshIndicator(
+            refreshing = isRefreshing,
+            state = pullRefreshState,
+            modifier = Modifier.align(Alignment.TopCenter),
+            backgroundColor = MaterialTheme.colorScheme.surface,
+            contentColor = MaterialTheme.colorScheme.primary,
+            scale = true
+        )
     }
 }
 

@@ -20,7 +20,15 @@ class NewsViewModel @Inject constructor(
     private val _newsState = MutableStateFlow<NewsState>(NewsState.Loading)
     val newsState: StateFlow<NewsState> = _newsState
 
+    private val _isRefreshing = MutableStateFlow(false)
+    val isRefreshing: StateFlow<Boolean> = _isRefreshing.asStateFlow()
+
     init {
+        fetchNews()
+    }
+
+    fun refreshNews() {
+        _isRefreshing.value = true
         fetchNews()
     }
 
@@ -28,8 +36,14 @@ class NewsViewModel @Inject constructor(
         viewModelScope.launch {
             newsRepository.getF1News().collect { result ->
                 _newsState.value = when(result) {
-                    is Resource.Success -> NewsState.Success(result.data ?: emptyList())
-                    is Resource.Error -> NewsState.Error(result.message ?: "An unexpected error occurred")
+                    is Resource.Success -> {
+                        _isRefreshing.value = false
+                        NewsState.Success(result.data ?: emptyList())
+                    }
+                    is Resource.Error -> {
+                        _isRefreshing.value = false
+                        NewsState.Error(result.message ?: "An unexpected error occurred")
+                    }
                     is Resource.Loading -> NewsState.Loading
                 }
             }

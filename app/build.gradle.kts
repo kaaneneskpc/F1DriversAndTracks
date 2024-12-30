@@ -118,6 +118,6 @@ dependencies {
     implementation (libs.converter.moshi)
     implementation (libs.logging.interceptor.v500alpha3)
 
-    // Swipe
-    implementation(libs.swipe)
+    // Pull to Refresh
+    implementation(libs.androidx.material)
 }
