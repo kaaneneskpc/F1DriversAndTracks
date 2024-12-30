@@ -8,12 +8,13 @@ import com.example.f1drivers.domain.util.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
 class NewsViewModel @Inject constructor(
-    private val repository: NewsRepository
+    private val newsRepository: NewsRepository
 ) : ViewModel() {
 
     private val _newsState = MutableStateFlow<NewsState>(NewsState.Loading)
@@ -25,7 +26,7 @@ class NewsViewModel @Inject constructor(
 
     private fun fetchNews() {
         viewModelScope.launch {
-            repository.getF1News().collect { result ->
+            newsRepository.getF1News().collect { result ->
                 _newsState.value = when(result) {
                     is Resource.Success -> NewsState.Success(result.data ?: emptyList())
                     is Resource.Error -> NewsState.Error(result.message ?: "An unexpected error occurred")

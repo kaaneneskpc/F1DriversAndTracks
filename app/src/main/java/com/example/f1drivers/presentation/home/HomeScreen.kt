@@ -39,7 +39,10 @@ fun HomeScreen(
                 title = {
                     Text(
                         text = "F1 2024 Drivers",
-                        style = MaterialTheme.typography.titleLarge
+                        style = MaterialTheme.typography.headlineMedium,
+                        fontWeight = FontWeight.Bold,
+                        color = MaterialTheme.colorScheme.onBackground,
+                        modifier = Modifier.padding(bottom = 16.dp)
                     )
                 },
                 actions = {
