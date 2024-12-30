@@ -119,7 +119,6 @@ fun NewsList(
     }
 }
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun NewsCard(
     news: News,

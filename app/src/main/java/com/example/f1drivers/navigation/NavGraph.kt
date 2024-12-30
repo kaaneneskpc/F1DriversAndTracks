@@ -12,6 +12,7 @@ import com.example.f1drivers.presentation.home.HomeScreen
 import com.example.f1drivers.presentation.home.detail.DriverDetailScreen
 import com.example.f1drivers.presentation.news.NewsScreen
 import com.example.f1drivers.presentation.news.NewsWebViewScreen
+import com.example.f1drivers.presentation.splash.SplashScreen
 import java.net.URLDecoder
 import java.net.URLEncoder
 import java.nio.charset.StandardCharsets
@@ -22,8 +23,18 @@ fun NavGraph(
 ) {
     NavHost(
         navController = navController,
-        startDestination = NavigationScreen.Home.route
+        startDestination = NavigationScreen.Splash.route
     ) {
+        composable(route = NavigationScreen.Splash.route) {
+            SplashScreen(
+                onNavigateToHome = {
+                    navController.navigate(NavigationScreen.Home.route) {
+                        popUpTo(NavigationScreen.Splash.route) { inclusive = true }
+                    }
+                }
+            )
+        }
+
         composable(route = NavigationScreen.Home.route) {
             HomeScreen(
                 onDriverClick = { driverId ->

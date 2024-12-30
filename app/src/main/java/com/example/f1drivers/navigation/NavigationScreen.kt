@@ -1,6 +1,7 @@
 package com.example.f1drivers.navigation
 
 sealed class NavigationScreen(val route: String) {
+    object Splash : NavigationScreen("splash")
     object Home : NavigationScreen("home")
     object News : NavigationScreen("news")
     object Circuits : NavigationScreen("circuits")
