@@ -51,7 +51,7 @@ fun DriverDetailScreen(
                         ) {
                             IconButton(
                                 onClick = onBackClick,
-                                modifier = Modifier.align(Alignment.CenterStart)
+                                modifier = Modifier.align(Alignment.CenterStart).padding(top = 24.dp)
                             ) {
                                 Icon(
                                     imageVector = Icons.AutoMirrored.Filled.ArrowBack,
@@ -61,7 +61,7 @@ fun DriverDetailScreen(
                             Text(
                                 text = "Driver Details",
                                 style = MaterialTheme.typography.titleLarge,
-                                modifier = Modifier.align(Alignment.Center)
+                                modifier = Modifier.align(Alignment.Center).padding(top = 24.dp)
                             )
                         }
                         DriverDetail(driver = state.driver)
