@@ -1,3 +1,59 @@
+# F1 Drivers App 🏎️
+
+A modern Android application that provides comprehensive information about Formula 1 drivers, circuits, and news. Built with Jetpack Compose and following clean architecture principles.
+
+## Overview
+
+F1 Drivers App is your one-stop destination for everything Formula 1. Stay updated with the latest driver information, explore famous circuits, and keep track of your favorite drivers.
+
+## Tech Stack
+
+- **Kotlin** - Primary programming language
+- **Jetpack Compose** - Modern UI toolkit for native Android UI
+- **Material 3** - Latest Material Design components and theming
+- **Hilt** - Dependency injection
+- **Room Database** - Local data storage
+- **Kotlin Coroutines & Flow** - Asynchronous programming
+- **Clean Architecture** - Project architecture pattern
+- **MVVM** - Presentation layer pattern
+
+## Features
+
+### 🏃 Drivers
+- Browse comprehensive list of F1 drivers
+- View detailed driver information
+- Search drivers by name
+- Driver statistics and career highlights
+
+### ❤️ Favorites
+- Add drivers to favorites
+- Quick access to favorite drivers
+- Manage favorite drivers list
+- Persistent storage of favorites
+
+### 🏁 Circuits
+- Explore F1 race circuits
+- Detailed circuit information
+- Circuit characteristics and history
+- Visual circuit layouts
+
+### 📰 News
+- Latest F1 news updates
+- News article previews
+- Web view for full article reading
+- Stay updated with F1 world
+
+### 🎨 UI/UX
+- Modern Material 3 design
+- Dark/Light theme support
+- Smooth animations and transitions
+- Intuitive navigation
+- Gradient backgrounds
+- Responsive layout
+
+## Screenshots
+[Screenshots will be added]
+
 ## Installation
 
 Clone the repository
@@ -253,7 +309,6 @@ dependencies {
 }
 
 ```
-</br>
 
 ## Acknowledgments
 
