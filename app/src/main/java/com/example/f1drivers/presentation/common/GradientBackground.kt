@@ -16,9 +16,9 @@ fun GradientBackground(
 ) {
     val gradientBackground = Brush.verticalGradient(
         colors = listOf(
-            Color(0xFF1A237E), // Koyu mavi
-            Color(0xFF303F9F), // Orta mavi
-            Color(0xFF3949AB)  // Açık mavi
+            Color(0xFF1A237E),
+            Color(0xFF303F9F),
+            Color(0xFF3949AB)
         )
     )
 

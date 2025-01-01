@@ -8,13 +8,11 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.ContentScale
@@ -24,11 +22,9 @@ import coil.compose.AsyncImage
 import com.example.f1drivers.data.local.CircuitsData
 import com.example.f1drivers.presentation.common.GradientBackground
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CircuitDetailScreen(
-    circuitId: Int,
-    onBackClick: () -> Unit
+    circuitId: Int
 ) {
     val circuit = CircuitsData.circuits.find { it.id == circuitId }
 

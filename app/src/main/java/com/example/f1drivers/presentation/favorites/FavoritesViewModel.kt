@@ -2,7 +2,6 @@ package com.example.f1drivers.presentation.favorites
 
 import android.content.Context
 import androidx.lifecycle.ViewModel
-import com.example.f1drivers.domain.model.driver.Driver
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -14,7 +13,7 @@ class FavoritesViewModel @Inject constructor(
     @ApplicationContext private val context: Context
 ) : ViewModel() {
     private val sharedPreferences = context.getSharedPreferences("favorites", Context.MODE_PRIVATE)
-    private val _favoriteDrivers = MutableStateFlow<Set<Int>>(loadFavorites())
+    private val _favoriteDrivers = MutableStateFlow(loadFavorites())
     val favoriteDrivers: StateFlow<Set<Int>> = _favoriteDrivers
 
     private fun loadFavorites(): Set<Int> {
@@ -39,9 +38,5 @@ class FavoritesViewModel @Inject constructor(
         }
         _favoriteDrivers.value = currentFavorites
         saveFavorites(currentFavorites)
-    }
-
-    fun isFavorite(driverId: Int): Boolean {
-        return _favoriteDrivers.value.contains(driverId)
     }
 } 

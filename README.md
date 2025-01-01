@@ -17,6 +17,37 @@ F1 Drivers App is your one-stop destination for everything Formula 1. Stay updat
 - **Clean Architecture** - Project architecture pattern
 - **MVVM** - Presentation layer pattern
 
+## Architecture Details
+
+The project follows Clean Architecture principles and is organized into three main layers:
+
+### 1. Data Layer
+- Handles data operations
+- Contains repositories implementations
+- Manages local database (Room)
+- Handles API calls
+- Data mapping between layers
+
+### 2. Domain Layer
+- Contains business logic
+- Use cases
+- Repository interfaces
+- Domain models
+
+### 3. Presentation Layer
+- MVVM pattern
+- UI components
+- ViewModels
+- State management
+- Jetpack Compose UI
+
+### Key Components
+- **Dependency Injection**: Hilt for dependency management
+- **Navigation**: Jetpack Navigation Compose
+- **Database**: Room for local storage
+- **Network**: Retrofit for API calls
+- **Asynchronous Operations**: Coroutines and Flow
+
 ## Features
 
 ### 🏃 Drivers
@@ -307,8 +338,54 @@ dependencies {
     // Pull to Refresh
     implementation(libs.androidx.material)
 }
-
 ```
+
+## Installation Requirements
+
+### Prerequisites
+- Android Studio Hedgehog | 2023.1.1 or newer
+- Minimum SDK Level 24
+- Target SDK Level 35
+- Gradle 8.5
+- News API Key (Required for news functionality)
+
+### Getting Started
+1. Get a News API Key at [https://newsapi.org](https://newsapi.org)
+2. Create a `local.properties` file in the root directory if not exists
+3. Add your API key in `local.properties`:
+   ```properties
+   NEWS_API_KEY=your_api_key_here
+   ```
+
+## Contributing Guide
+
+### How to Contribute
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+### Code Style Guidelines
+- Follow Kotlin coding conventions
+- Use meaningful names for functions and variables
+- Write comments for complex logic
+- Keep functions small and focused
+- Add appropriate unit tests for new features
+
+### Issue Reporting
+- Use the GitHub issue tracker
+- Clearly describe the issue or bug
+- Include steps to reproduce
+- Add screenshots if applicable
+- Mention your environment details
+
+### Branch Strategy
+- `main`: Production-ready code
+- `develop`: Development branch
+- `feature/*`: New features
+- `bugfix/*`: Bug fixes
+- `release/*`: Release preparations
 
 ## Acknowledgments
 

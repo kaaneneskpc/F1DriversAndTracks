@@ -77,10 +77,7 @@ fun NavGraph(
         ) { backStackEntry ->
             val circuitId = backStackEntry.arguments?.getInt("circuitId") ?: return@composable
             CircuitDetailScreen(
-                circuitId = circuitId,
-                onBackClick = {
-                    navController.popBackStack()
-                }
+                circuitId = circuitId
             )
         }
         composable(
