@@ -13,7 +13,9 @@ object DriversData {
             imageUrl = "https://media.formula1.com/content/dam/fom-website/drivers/2024drivers/verstappen.jpg.img.1920.medium.jpg/1708592972581.jpg",
             polePositions = 32,
             championships = 3,
-            victories = 54
+            victories = 54,
+            age = 26,
+            nationality = "Dutch"
         ),
         2 to Driver(
             id = 2,
@@ -24,7 +26,9 @@ object DriversData {
             imageUrl = "https://media.formula1.com/content/dam/fom-website/drivers/2024drivers/perez.jpg.img.1920.medium.jpg/1708593648121.jpg",
             polePositions = 3,
             championships = 0,
-            victories = 6
+            victories = 6,
+            age = 34,
+            nationality = "Mexican"
         ),
         3 to Driver(
             id = 3,
@@ -35,7 +39,9 @@ object DriversData {
             imageUrl = "https://media.formula1.com/content/dam/fom-website/drivers/2024drivers/hamilton.jpg.img.1920.medium.jpg/1708592892276.jpg",
             polePositions = 104,
             championships = 7,
-            victories = 103
+            victories = 103,
+            age = 39,
+            nationality = "British"
         ),
         4 to Driver(
             id = 4,
@@ -46,7 +52,9 @@ object DriversData {
             imageUrl = "https://media.formula1.com/content/dam/fom-website/drivers/2024drivers/russell.jpg.img.1920.medium.jpg/1708593642622.jpg",
             polePositions = 1,
             championships = 0,
-            victories = 1
+            victories = 1,
+            age = 26,
+            nationality = "British"
         ),
         5 to Driver(
             id = 5,
@@ -57,7 +65,9 @@ object DriversData {
             imageUrl = "https://media.formula1.com/content/dam/fom-website/drivers/2024drivers/leclerc.jpg.img.1920.medium.jpg/1708593638650.jpg",
             polePositions = 23,
             championships = 0,
-            victories = 5
+            victories = 5,
+            age = 26,
+            nationality = "Monégasque"
         ),
         6 to Driver(
             id = 6,
@@ -68,7 +78,9 @@ object DriversData {
             imageUrl = "https://media.formula1.com/content/dam/fom-website/drivers/2024drivers/sainz.jpg.img.1920.medium.jpg/1708593644588.jpg",
             polePositions = 5,
             championships = 0,
-            victories = 3
+            victories = 3,
+            age = 29,
+            nationality = "Spanish"
         ),
         7 to Driver(
             id = 7,
@@ -79,7 +91,9 @@ object DriversData {
             imageUrl = "https://media.formula1.com/content/dam/fom-website/drivers/2024drivers/norris.jpg.img.1920.medium.jpg/1708593640652.jpg",
             polePositions = 1,
             championships = 0,
-            victories = 0
+            victories = 0,
+            age = 24,
+            nationality = "British"
         ),
         8 to Driver(
             id = 8,
@@ -90,7 +104,9 @@ object DriversData {
             imageUrl = "https://media.formula1.com/content/dam/fom-website/drivers/2024drivers/piastri.jpg.img.1920.medium.jpg/1708593643166.jpg",
             polePositions = 1,
             championships = 0,
-            victories = 0
+            victories = 0,
+            age = 22,
+            nationality = "Australian"
         ),
         9 to Driver(
             id = 9,
@@ -101,7 +117,9 @@ object DriversData {
             imageUrl = "https://media.formula1.com/content/dam/fom-website/drivers/2024drivers/alonso.jpg.img.1920.medium.jpg/1708593634412.jpg",
             polePositions = 22,
             championships = 2,
-            victories = 32
+            victories = 32,
+            age = 42,
+            nationality = "Spanish"
         ),
         10 to Driver(
             id = 10,
@@ -112,7 +130,9 @@ object DriversData {
             imageUrl = "https://media.formula1.com/content/dam/fom-website/drivers/2024drivers/stroll.jpg.img.1920.medium.jpg/1708593645182.jpg",
             polePositions = 1,
             championships = 0,
-            victories = 0
+            victories = 0,
+            age = 25,
+            nationality = "Canadian"
         ),
         11 to Driver(
             id = 11,
@@ -123,7 +143,9 @@ object DriversData {
             imageUrl = "https://media.formula1.com/content/dam/fom-website/drivers/2024drivers/gasly.jpg.img.1920.medium.jpg/1708593636435.jpg",
             polePositions = 0,
             championships = 0,
-            victories = 1
+            victories = 1,
+            age = 28,
+            nationality = "French"
         ),
         12 to Driver(
             id = 12,
@@ -134,7 +156,9 @@ object DriversData {
             imageUrl = "https://media.formula1.com/content/dam/fom-website/drivers/2024drivers/ocon.jpg.img.1920.medium.jpg/1708593641632.jpg",
             polePositions = 0,
             championships = 0,
-            victories = 1
+            victories = 1,
+            age = 27,
+            nationality = "French"
         ),
         13 to Driver(
             id = 13,
@@ -145,7 +169,9 @@ object DriversData {
             imageUrl = "https://media.formula1.com/content/dam/fom-website/drivers/2024drivers/albon.jpg.img.1920.medium.jpg/1708593633771.jpg",
             polePositions = 0,
             championships = 0,
-            victories = 0
+            victories = 0,
+            age = 27,
+            nationality = "Thai"
         ),
         14 to Driver(
             id = 14,
@@ -156,7 +182,9 @@ object DriversData {
             imageUrl = "https://media.formula1.com/content/dam/fom-website/drivers/2024drivers/sargeant.jpg.img.1920.medium.jpg/1708593644055.jpg",
             polePositions = 0,
             championships = 0,
-            victories = 0
+            victories = 0,
+            age = 23,
+            nationality = "American"
         ),
         15 to Driver(
             id = 15,
@@ -167,7 +195,9 @@ object DriversData {
             imageUrl = "https://media.formula1.com/content/dam/fom-website/drivers/2024drivers/tsunoda.jpg.img.1920.medium.jpg/1708593646734.jpg",
             polePositions = 0,
             championships = 0,
-            victories = 0
+            victories = 0,
+            age = 23,
+            nationality = "Japanese"
         ),
         16 to Driver(
             id = 16,
@@ -178,7 +208,9 @@ object DriversData {
             imageUrl = "https://media.formula1.com/content/dam/fom-website/drivers/2024drivers/ricciardo.jpg.img.1920.medium.jpg/1708593643675.jpg",
             polePositions = 3,
             championships = 0,
-            victories = 8
+            victories = 8,
+            age = 34,
+            nationality = "Australian"
         ),
         17 to Driver(
             id = 17,
@@ -189,7 +221,9 @@ object DriversData {
             imageUrl = "https://media.formula1.com/content/dam/fom-website/drivers/2024drivers/bottas.jpg.img.1920.medium.jpg/1708593635410.jpg",
             polePositions = 20,
             championships = 0,
-            victories = 10
+            victories = 10,
+            age = 34,
+            nationality = "Finnish"
         ),
         18 to Driver(
             id = 18,
@@ -200,7 +234,9 @@ object DriversData {
             imageUrl = "https://media.formula1.com/content/dam/fom-website/drivers/2024drivers/zhou.jpg.img.1920.medium.jpg/1708593647527.jpg",
             polePositions = 0,
             championships = 0,
-            victories = 0
+            victories = 0,
+            age = 24,
+            nationality = "Chinese"
         ),
         19 to Driver(
             id = 19,
@@ -211,7 +247,9 @@ object DriversData {
             imageUrl = "https://media.formula1.com/content/dam/fom-website/drivers/2024drivers/magnussen.jpg.img.1920.medium.jpg/1708593639633.jpg",
             polePositions = 1,
             championships = 0,
-            victories = 0
+            victories = 0,
+            age = 31,
+            nationality = "Danish"
         ),
         20 to Driver(
             id = 20,
@@ -222,7 +260,9 @@ object DriversData {
             imageUrl = "https://media.formula1.com/content/dam/fom-website/drivers/2024drivers/hulkenberg.jpg.img.1920.medium.jpg/1708593637442.jpg",
             polePositions = 1,
             championships = 0,
-            victories = 0
+            victories = 0,
+            age = 36,
+            nationality = "German"
         )
     )
 
