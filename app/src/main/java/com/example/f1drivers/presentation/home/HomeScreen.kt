@@ -82,7 +82,6 @@ fun HomeScreen(
                     .fillMaxSize()
                     .padding(paddingValues)
             ) {
-                // Search Bar
                 Surface(
                     modifier = Modifier
                         .fillMaxWidth()

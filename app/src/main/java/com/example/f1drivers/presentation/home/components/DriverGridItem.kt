@@ -91,7 +91,6 @@ fun DriverGridItem(
             )
         ) { }
 
-        // Main Card
         Card(
             modifier = Modifier
                 .matchParentSize()
@@ -112,7 +111,6 @@ fun DriverGridItem(
                     .fillMaxSize()
                     .background(backgroundGradient)
             ) {
-                // Decorative Elements
                 Box(
                     modifier = Modifier
                         .fillMaxSize()
@@ -127,7 +125,6 @@ fun DriverGridItem(
                         )
                 )
 
-                // Content
                 Column(
                     modifier = Modifier
                         .fillMaxSize()
@@ -140,7 +137,6 @@ fun DriverGridItem(
                             .weight(1f),
                         contentAlignment = Alignment.Center
                     ) {
-                        // Driver Image with Border
                         Box(
                             modifier = Modifier
                                 .size(150.dp)

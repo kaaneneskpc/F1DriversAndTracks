@@ -35,7 +35,6 @@ fun CircuitListItem(
                 .fillMaxWidth()
                 .height(200.dp)
         ) {
-            // Circuit Image
             AsyncImage(
                 model = circuit.imageUrl,
                 contentDescription = circuit.name,
@@ -45,7 +44,6 @@ fun CircuitListItem(
                 contentScale = ContentScale.Crop
             )
 
-            // Gradient Overlay
             Box(
                 modifier = Modifier
                     .fillMaxSize()
@@ -59,14 +57,12 @@ fun CircuitListItem(
                     )
             )
 
-            // Content
             Column(
                 modifier = Modifier
                     .fillMaxSize()
                     .padding(16.dp),
                 verticalArrangement = Arrangement.Bottom
             ) {
-                // Circuit Info
                 Column {
                     Text(
                         text = circuit.name,
