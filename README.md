@@ -3,7 +3,10 @@
 A modern Android application that provides comprehensive information about Formula 1 drivers, circuits, and news. Built with Jetpack Compose and following clean architecture principles.
 
 ## Overview
-![image](https://github.com/user-attachments/assets/e184807d-96d0-4476-a8db-659067f8e632)
+
+![image](https://github.com/user-attachments/assets/b7870e88-f604-42c7-bc3c-975b8fd0c33a)
+
+
 F1 Drivers App is your one-stop destination for everything Formula 1. Stay updated with the latest driver information, explore famous circuits, and keep track of your favorite drivers.
 
 ## Tech Stack
