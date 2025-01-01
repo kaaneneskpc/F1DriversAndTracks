@@ -89,6 +89,21 @@ The project follows Clean Architecture principles and is organized into three ma
 
 ## Installation
 
+### Prerequisites
+- Android Studio Hedgehog | 2023.1.1 or newer
+- Minimum SDK Level 24
+- Target SDK Level 35
+- Gradle 8.5
+- News API Key (Required for news functionality)
+
+### Getting Started
+1. Get a News API Key at [https://newsapi.org](https://newsapi.org)
+2. Create a `local.properties` file in the root directory if not exists
+3. Add your API key in `local.properties`:
+   ```properties
+   NEWS_API_KEY=your_api_key_here
+   ```
+
 Clone the repository
 ```kotlin
 https://github.com/kaaneneskpc/F1DriversAndTracks.git
@@ -341,23 +356,6 @@ dependencies {
     implementation(libs.androidx.material)
 }
 ```
-
-## Installation Requirements
-
-### Prerequisites
-- Android Studio Hedgehog | 2023.1.1 or newer
-- Minimum SDK Level 24
-- Target SDK Level 35
-- Gradle 8.5
-- News API Key (Required for news functionality)
-
-### Getting Started
-1. Get a News API Key at [https://newsapi.org](https://newsapi.org)
-2. Create a `local.properties` file in the root directory if not exists
-3. Add your API key in `local.properties`:
-   ```properties
-   NEWS_API_KEY=your_api_key_here
-   ```
 
 ## Contributing Guide
 
