@@ -1,6 +1,5 @@
 package com.example.f1drivers.presentation.home.components
 
-import androidx.compose.animation.*
 import androidx.compose.animation.core.*
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -8,9 +7,6 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Favorite
-import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -31,13 +27,11 @@ import com.example.f1drivers.domain.model.driver.Driver
 import kotlin.math.PI
 import kotlin.math.sin
 
-@OptIn(ExperimentalMaterial3Api::class)
+
 @Composable
 fun DriverGridItem(
     driver: Driver,
-    onItemClick: (Int) -> Unit,
-    onFavoriteClick: (Driver) -> Unit,
-    isFavorite: Boolean,
+    onItemClick: (Driver) -> Unit,
     modifier: Modifier = Modifier
 ) {
     var isPressed by remember { mutableStateOf(false) }
@@ -60,12 +54,6 @@ fun DriverGridItem(
             stiffness = Spring.StiffnessLow
         ),
         label = "scale"
-    )
-    
-    val favoriteColor by animateColorAsState(
-        targetValue = if (isFavorite) Color(0xFFFF1744) else Color.Gray,
-        animationSpec = spring(stiffness = Spring.StiffnessLow),
-        label = "favorite color"
     )
 
     val teamColors = getTeamColors(driver.team)
@@ -108,7 +96,7 @@ fun DriverGridItem(
             modifier = Modifier
                 .matchParentSize()
                 .clickable { 
-                    onItemClick(driver.id)
+                    onItemClick(driver)
                     isPressed = !isPressed 
                 },
             shape = RoundedCornerShape(32.dp),
@@ -169,34 +157,11 @@ fun DriverGridItem(
                                 modifier = Modifier
                                     .fillMaxSize()
                                     .clip(CircleShape),
-                                contentScale = ContentScale.Crop
+                                contentScale = ContentScale.Crop,
+                                alignment = Alignment.TopCenter
                             )
                         }
-                        
-                        // Favorite Button
-                        Surface(
-                            modifier = Modifier
-                                .align(Alignment.TopEnd)
-                                .padding(8.dp),
-                            shape = CircleShape,
-                            color = Color.White.copy(alpha = 0.9f),
-                            shadowElevation = 4.dp
-                        ) {
-                            IconButton(
-                                onClick = { onFavoriteClick(driver) }
-                            ) {
-                                Icon(
-                                    imageVector = if (isFavorite) Icons.Default.Favorite else Icons.Default.FavoriteBorder,
-                                    contentDescription = if (isFavorite) "Remove from favorites" else "Add to favorites",
-                                    tint = favoriteColor,
-                                    modifier = Modifier
-                                        .size(24.dp)
-                                        .scale(if (isFavorite) 1.2f else 1f)
-                                )
-                            }
-                        }
 
-                        // Driver Number Badge
                         Surface(
                             shape = CircleShape,
                             modifier = Modifier
@@ -221,7 +186,6 @@ fun DriverGridItem(
 
                     Spacer(modifier = Modifier.height(16.dp))
 
-                    // Driver Name
                     Surface(
                         color = Color.White.copy(alpha = 0.8f),
                         shape = RoundedCornerShape(16.dp)
@@ -239,7 +203,6 @@ fun DriverGridItem(
 
                     Spacer(modifier = Modifier.height(8.dp))
 
-                    // Team Name
                     Surface(
                         shape = RoundedCornerShape(24.dp),
                         modifier = Modifier.shadow(4.dp, RoundedCornerShape(24.dp))

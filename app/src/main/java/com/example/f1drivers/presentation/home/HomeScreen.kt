@@ -15,6 +15,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.List
 import androidx.compose.material.icons.filled.*
+import androidx.compose.material.icons.outlined.FavoriteBorder
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -30,32 +31,23 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import coil.compose.AsyncImage
 import com.example.f1drivers.domain.model.driver.Driver
+import com.example.f1drivers.presentation.common.GradientBackground
 import com.example.f1drivers.presentation.home.components.DriverGridItem
+import com.example.f1drivers.presentation.favorites.FavoritesViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(
     viewModel: HomeViewModel = hiltViewModel(),
+    favoritesViewModel: FavoritesViewModel = hiltViewModel(),
     onDriverClick: (Int) -> Unit
 ) {
     val driversState by viewModel.driversState.collectAsState()
     val searchQuery by viewModel.searchQuery.collectAsState()
     val viewType by viewModel.viewType.collectAsState()
+    val favoriteDrivers by favoritesViewModel.favoriteDrivers.collectAsState()
 
-    val gradientBackground = Brush.verticalGradient(
-        colors = listOf(
-            Color(0xFF1A237E), // Koyu mavi
-            Color(0xFF303F9F), // Orta mavi
-            Color(0xFF3949AB)  // Açık mavi
-        )
-    )
-
-    Box(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(brush = gradientBackground)
-            .systemBarsPadding()
-    ) {
+    GradientBackground {
         Scaffold(
             modifier = Modifier.fillMaxSize(),
             containerColor = Color.Transparent,
@@ -156,7 +148,12 @@ fun HomeScreen(
                             if (viewType == ViewType.GRID) {
                                 LazyVerticalGrid(
                                     columns = GridCells.Fixed(2),
-                                    contentPadding = PaddingValues(16.dp),
+                                    contentPadding = PaddingValues(
+                                        start = 16.dp,
+                                        end = 16.dp,
+                                        top = 16.dp,
+                                        bottom = 100.dp
+                                    ),
                                     horizontalArrangement = Arrangement.spacedBy(16.dp),
                                     verticalArrangement = Arrangement.spacedBy(16.dp),
                                     modifier = Modifier.fillMaxSize()
@@ -164,22 +161,27 @@ fun HomeScreen(
                                     items(drivers) { driver ->
                                         DriverGridItem(
                                             driver = driver,
-                                            onItemClick = { onDriverClick(driver.id) },
-                                            onFavoriteClick = { /* Implement favorite functionality */ },
-                                            isFavorite = false
+                                            onItemClick = { onDriverClick(it.id) }
                                         )
                                     }
                                 }
                             } else {
                                 LazyColumn(
-                                    contentPadding = PaddingValues(16.dp),
+                                    contentPadding = PaddingValues(
+                                        start = 16.dp,
+                                        end = 16.dp,
+                                        top = 16.dp,
+                                        bottom = 100.dp
+                                    ),
                                     verticalArrangement = Arrangement.spacedBy(16.dp),
                                     modifier = Modifier.fillMaxSize()
                                 ) {
                                     items(drivers) { driver ->
                                         DriverListItem(
                                             driver = driver,
-                                            onClick = { onDriverClick(driver.id) }
+                                            onClick = { onDriverClick(driver.id) },
+                                            isFavorite = favoriteDrivers.contains(driver.id),
+                                            onFavoriteClick = { favoritesViewModel.toggleFavorite(driver.id) }
                                         )
                                     }
                                 }
@@ -214,6 +216,8 @@ fun HomeScreen(
 fun DriverListItem(
     driver: Driver,
     onClick: () -> Unit,
+    isFavorite: Boolean,
+    onFavoriteClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     val teamColors = getTeamColors(driver.team)
@@ -242,23 +246,25 @@ fun DriverListItem(
                 modifier = Modifier.padding(16.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                Surface(
-                    shape = CircleShape,
-                    border = BorderStroke(
-                        width = 2.dp,
-                        brush = Brush.linearGradient(
-                            colors = listOf(teamColors.first, teamColors.second)
+                Box(
+                    modifier = Modifier
+                        .size(100.dp)
+                        .clip(CircleShape)
+                        .background(
+                            Brush.linearGradient(
+                                colors = listOf(teamColors.first, teamColors.second)
+                            )
                         )
-                    ),
-                    modifier = Modifier.size(80.dp)
                 ) {
                     AsyncImage(
                         model = driver.imageUrl,
                         contentDescription = "${driver.firstName} ${driver.lastName}",
                         modifier = Modifier
                             .fillMaxSize()
+                            .padding(2.dp)
                             .clip(CircleShape),
-                        contentScale = ContentScale.Crop
+                        contentScale = ContentScale.Crop,
+                        alignment = Alignment.TopCenter
                     )
                 }
                 
@@ -278,11 +284,22 @@ fun DriverListItem(
                         color = teamColors.first
                     )
                 }
+
+                IconButton(
+                    onClick = onFavoriteClick,
+                    modifier = Modifier.padding(horizontal = 8.dp)
+                ) {
+                    Icon(
+                        imageVector = if (isFavorite) Icons.Default.Favorite else Icons.Outlined.FavoriteBorder,
+                        contentDescription = if (isFavorite) "Remove from favorites" else "Add to favorites",
+                        tint = if (isFavorite) Color(0xFFFF1744) else Color.Gray,
+                        modifier = Modifier.size(24.dp)
+                    )
+                }
                 
                 Surface(
                     shape = CircleShape,
-                    color = teamColors.first.copy(alpha = 0.2f),
-                    modifier = Modifier.padding(start = 8.dp)
+                    color = teamColors.first.copy(alpha = 0.2f)
                 ) {
                     Text(
                         text = "#${driver.number}",

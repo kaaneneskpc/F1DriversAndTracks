@@ -3,20 +3,20 @@ data class Circuit(
     val name: String,
     val country: String,
     val imageUrl: String,
+    val circuitMapUrl: String,
     val length: String,
+    val numberOfCorners: Int,
+    val numberOfDrsZones: Int,
+    val raceDistance: String,
     val numberOfLaps: Int,
     val lapRecord: String,
     val lapRecordHolder: String,
     val firstGrandPrix: Int,
     val description: String,
-    val circuitMapUrl: String,
-    val numberOfCorners: Int,
-    val numberOfDrsZones: Int,
-    val raceDistance: String,
-    val previousWinners: List<PreviousWinner>,
     val characteristics: List<String>,
-    val weatherConditions: WeatherInfo,
-    val raceSchedule: RaceSchedule
+    val previousWinners: List<PreviousWinner>,
+    val raceSchedule: RaceSchedule,
+    val weatherConditions: WeatherInfo
 )
 
 data class PreviousWinner(

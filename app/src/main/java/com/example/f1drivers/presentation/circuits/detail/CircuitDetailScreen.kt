@@ -15,12 +15,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import com.example.f1drivers.data.local.CircuitsData
+import com.example.f1drivers.presentation.common.GradientBackground
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -30,59 +32,43 @@ fun CircuitDetailScreen(
 ) {
     val circuit = CircuitsData.circuits.find { it.id == circuitId }
 
-    Scaffold(
-        modifier = Modifier.fillMaxSize(),
-        contentWindowInsets = WindowInsets(0, 0, 0, 0),
-        topBar = {
-            CenterAlignedTopAppBar(
-                modifier = Modifier.statusBarsPadding(),
-                title = { 
-                    Text(
-                        text = "Circuit Details",
-                        style = MaterialTheme.typography.titleLarge,
-                        fontWeight = FontWeight.Bold,
-                        color = MaterialTheme.colorScheme.onSurface
+    GradientBackground {
+        Scaffold(
+            modifier = Modifier.fillMaxSize(),
+            containerColor = Color.Transparent,
+            contentWindowInsets = WindowInsets(0, 0, 0, 0)
+        ) { paddingValues ->
+            if (circuit != null) {
+                Column(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .verticalScroll(rememberScrollState())
+                        .padding(paddingValues)
+                ) {
+                    CircuitDetailContent(
+                        circuit = circuit,
+                        modifier = Modifier.padding(horizontal = 16.dp)
                     )
-                },
-                navigationIcon = {
-                    IconButton(onClick = onBackClick) {
-                        Icon(
-                            imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                            contentDescription = "Back",
-                            tint = MaterialTheme.colorScheme.onSurface
+                }
+            } else {
+                Box(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(paddingValues),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Surface(
+                        color = Color.White.copy(alpha = 0.9f),
+                        shape = RoundedCornerShape(16.dp)
+                    ) {
+                        Text(
+                            text = "Circuit not found",
+                            style = MaterialTheme.typography.titleLarge,
+                            color = MaterialTheme.colorScheme.error,
+                            modifier = Modifier.padding(16.dp)
                         )
                     }
-                },
-                colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
-                    containerColor = MaterialTheme.colorScheme.surface
-                )
-            )
-        }
-    ) { paddingValues ->
-        if (circuit != null) {
-            Column(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .verticalScroll(rememberScrollState())
-                    .padding(paddingValues)
-            ) {
-                CircuitDetailContent(
-                    circuit = circuit,
-                    modifier = Modifier.padding(horizontal = 16.dp)
-                )
-            }
-        } else {
-            Box(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .padding(paddingValues),
-                contentAlignment = Alignment.Center
-            ) {
-                Text(
-                    text = "Circuit not found",
-                    style = MaterialTheme.typography.titleLarge,
-                    color = MaterialTheme.colorScheme.error
-                )
+                }
             }
         }
     }
@@ -131,8 +117,10 @@ private fun WeatherSection(weather: WeatherInfo) {
     Card(
         modifier = Modifier.fillMaxWidth(),
         colors = CardDefaults.cardColors(
-            containerColor = MaterialTheme.colorScheme.surfaceVariant
-        )
+            containerColor = Color.White.copy(alpha = 0.9f)
+        ),
+        elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
+        shape = RoundedCornerShape(16.dp)
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
             Row(
@@ -191,17 +179,19 @@ private fun WeatherItem(
         Icon(
             imageVector = icon,
             contentDescription = title,
-            tint = MaterialTheme.colorScheme.primary
+            tint = Color(0xFF1A237E)
         )
         Spacer(modifier = Modifier.height(4.dp))
         Text(
             text = value,
             style = MaterialTheme.typography.titleMedium,
-            fontWeight = FontWeight.Bold
+            fontWeight = FontWeight.Bold,
+            color = Color(0xFF1A237E)
         )
         Text(
             text = title,
-            style = MaterialTheme.typography.bodySmall
+            style = MaterialTheme.typography.bodySmall,
+            color = Color(0xFF303F9F)
         )
     }
 }
@@ -211,13 +201,18 @@ private fun RaceScheduleSection(schedule: RaceSchedule) {
     SectionTitle("Race Weekend Schedule")
 
     Card(
-        modifier = Modifier.fillMaxWidth()
+        modifier = Modifier.fillMaxWidth(),
+        colors = CardDefaults.cardColors(
+            containerColor = Color.White.copy(alpha = 0.9f)
+        ),
+        elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
+        shape = RoundedCornerShape(16.dp)
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
             Text(
                 text = "Race Day: ${schedule.raceDay}",
                 style = MaterialTheme.typography.titleMedium,
-                color = MaterialTheme.colorScheme.primary,
+                color = Color(0xFF1A237E),
                 fontWeight = FontWeight.Bold,
                 modifier = Modifier.padding(bottom = 16.dp)
             )
@@ -234,21 +229,26 @@ private fun RaceScheduleSection(schedule: RaceSchedule) {
                         Text(
                             text = session.name,
                             style = MaterialTheme.typography.bodyLarge,
-                            fontWeight = FontWeight.Bold
+                            fontWeight = FontWeight.Bold,
+                            color = Color(0xFF1A237E)
                         )
                         Text(
                             text = session.day,
-                            style = MaterialTheme.typography.bodyMedium
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = Color(0xFF303F9F)
                         )
                     }
                     Text(
                         text = session.time,
                         style = MaterialTheme.typography.bodyLarge,
-                        color = MaterialTheme.colorScheme.primary
+                        color = Color(0xFF1A237E)
                     )
                 }
                 if (session != schedule.sessions.last()) {
-                    Divider(modifier = Modifier.padding(vertical = 8.dp))
+                    Divider(
+                        modifier = Modifier.padding(vertical = 8.dp),
+                        color = Color(0xFF3949AB).copy(alpha = 0.2f)
+                    )
                 }
             }
         }
@@ -261,7 +261,8 @@ private fun CircuitHeader(circuit: Circuit) {
     Text(
         text = circuit.name,
         style = MaterialTheme.typography.headlineMedium,
-        fontWeight = FontWeight.Bold
+        fontWeight = FontWeight.Bold,
+        color = Color.White
     )
 
     Spacer(modifier = Modifier.height(16.dp))
@@ -269,7 +270,7 @@ private fun CircuitHeader(circuit: Circuit) {
     Text(
         text = circuit.country,
         style = MaterialTheme.typography.titleMedium,
-        color = MaterialTheme.colorScheme.primary
+        color = Color.White
     )
 }
 
@@ -280,12 +281,18 @@ private fun CircuitMap(circuit: Circuit) {
         modifier = Modifier
             .fillMaxWidth()
             .height(200.dp),
-        shape = RoundedCornerShape(8.dp)
+        shape = RoundedCornerShape(16.dp),
+        colors = CardDefaults.cardColors(
+            containerColor = Color.White.copy(alpha = 0.9f)
+        ),
+        elevation = CardDefaults.cardElevation(defaultElevation = 4.dp)
     ) {
         AsyncImage(
             model = circuit.circuitMapUrl,
             contentDescription = "Circuit layout",
-            modifier = Modifier.fillMaxSize(),
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(16.dp),
             contentScale = ContentScale.Fit
         )
     }
@@ -298,8 +305,10 @@ private fun CircuitCharacteristics(circuit: Circuit) {
     Card(
         modifier = Modifier.fillMaxWidth(),
         colors = CardDefaults.cardColors(
-            containerColor = MaterialTheme.colorScheme.surfaceVariant
-        )
+            containerColor = Color.White.copy(alpha = 0.9f)
+        ),
+        elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
+        shape = RoundedCornerShape(16.dp)
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
             Row(
@@ -326,6 +335,7 @@ private fun CircuitCharacteristics(circuit: Circuit) {
                 Text(
                     text = "• $characteristic",
                     style = MaterialTheme.typography.bodyMedium,
+                    color = Color(0xFF303F9F),
                     modifier = Modifier.padding(vertical = 4.dp)
                 )
             }
@@ -338,7 +348,12 @@ private fun TechnicalDetails(circuit: Circuit) {
     SectionTitle("Technical Details")
 
     Card(
-        modifier = Modifier.fillMaxWidth()
+        modifier = Modifier.fillMaxWidth(),
+        colors = CardDefaults.cardColors(
+            containerColor = Color.White.copy(alpha = 0.9f)
+        ),
+        elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
+        shape = RoundedCornerShape(16.dp)
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
             CircuitInfoItem(title = "Track Length", value = circuit.length)
@@ -355,7 +370,12 @@ private fun PreviousWinners(circuit: Circuit) {
     SectionTitle("Previous Winners")
 
     Card(
-        modifier = Modifier.fillMaxWidth()
+        modifier = Modifier.fillMaxWidth(),
+        colors = CardDefaults.cardColors(
+            containerColor = Color.White.copy(alpha = 0.9f)
+        ),
+        elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
+        shape = RoundedCornerShape(16.dp)
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
             circuit.previousWinners.forEach { winner ->
@@ -368,22 +388,27 @@ private fun PreviousWinners(circuit: Circuit) {
                     Text(
                         text = winner.year.toString(),
                         style = MaterialTheme.typography.bodyLarge,
-                        fontWeight = FontWeight.Bold
+                        fontWeight = FontWeight.Bold,
+                        color = Color(0xFF1A237E)
                     )
                     Column {
                         Text(
                             text = winner.driverName,
-                            style = MaterialTheme.typography.bodyLarge
+                            style = MaterialTheme.typography.bodyLarge,
+                            color = Color(0xFF1A237E)
                         )
                         Text(
                             text = winner.team,
                             style = MaterialTheme.typography.bodyMedium,
-                            color = MaterialTheme.colorScheme.primary
+                            color = Color(0xFF303F9F)
                         )
                     }
                 }
                 if (winner != circuit.previousWinners.last()) {
-                    Divider(modifier = Modifier.padding(vertical = 8.dp))
+                    Divider(
+                        modifier = Modifier.padding(vertical = 8.dp),
+                        color = Color(0xFF3949AB).copy(alpha = 0.2f)
+                    )
                 }
             }
         }
@@ -393,10 +418,21 @@ private fun PreviousWinners(circuit: Circuit) {
 @Composable
 private fun AboutCircuit(circuit: Circuit) {
     SectionTitle("About the Circuit")
-    Text(
-        text = circuit.description,
-        style = MaterialTheme.typography.bodyLarge
-    )
+    Card(
+        modifier = Modifier.fillMaxWidth(),
+        colors = CardDefaults.cardColors(
+            containerColor = Color.White.copy(alpha = 0.9f)
+        ),
+        elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
+        shape = RoundedCornerShape(16.dp)
+    ) {
+        Text(
+            text = circuit.description,
+            style = MaterialTheme.typography.bodyLarge,
+            color = Color(0xFF303F9F),
+            modifier = Modifier.padding(16.dp)
+        )
+    }
 }
 
 @Composable
@@ -412,11 +448,13 @@ private fun CharacteristicItem(
         Text(
             text = value,
             style = MaterialTheme.typography.titleLarge,
-            fontWeight = FontWeight.Bold
+            fontWeight = FontWeight.Bold,
+            color = Color(0xFF1A237E)
         )
         Text(
             text = title,
-            style = MaterialTheme.typography.bodyMedium
+            style = MaterialTheme.typography.bodyMedium,
+            color = Color(0xFF303F9F)
         )
     }
 }
@@ -436,11 +474,12 @@ private fun CircuitInfoItem(
         Text(
             text = title,
             style = MaterialTheme.typography.bodyLarge,
-            color = MaterialTheme.colorScheme.primary
+            color = Color(0xFF1A237E)
         )
         Text(
             text = value,
-            style = MaterialTheme.typography.bodyLarge
+            style = MaterialTheme.typography.bodyLarge,
+            color = Color(0xFF303F9F)
         )
     }
 }
@@ -451,6 +490,7 @@ private fun SectionTitle(title: String) {
         text = title,
         style = MaterialTheme.typography.titleLarge,
         fontWeight = FontWeight.Bold,
-        modifier = Modifier.padding(bottom = 16.dp)
+        modifier = Modifier.padding(bottom = 16.dp),
+        color = Color.White
     )
 } 

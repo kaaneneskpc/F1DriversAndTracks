@@ -12,7 +12,6 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.List
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.Home
-import androidx.compose.material.icons.filled.List
 import androidx.compose.material.icons.filled.Place
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
@@ -53,7 +52,8 @@ fun MainScreen() {
     val bottomNavItems = listOf(
         Triple(NavigationScreen.Home.route, "Home", Icons.Default.Home),
         Triple(NavigationScreen.News.route, "News", Icons.AutoMirrored.Filled.List),
-        Triple(NavigationScreen.Circuits.route, "Circuits", Icons.Default.Place)
+        Triple(NavigationScreen.Circuits.route, "Circuits", Icons.Default.Place),
+        Triple(NavigationScreen.Favorites.route, "Favorites", Icons.Default.Favorite)
     )
 
     val isBottomBarVisible = bottomNavItems.map { it.first }.contains(currentRoute)

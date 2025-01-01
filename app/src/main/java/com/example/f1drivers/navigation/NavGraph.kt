@@ -13,6 +13,7 @@ import com.example.f1drivers.presentation.home.detail.DriverDetailScreen
 import com.example.f1drivers.presentation.news.NewsScreen
 import com.example.f1drivers.presentation.news.NewsWebViewScreen
 import com.example.f1drivers.presentation.splash.SplashScreen
+import com.example.f1drivers.presentation.favorites.FavoritesScreen
 import java.net.URLDecoder
 import java.net.URLEncoder
 import java.nio.charset.StandardCharsets
@@ -42,6 +43,15 @@ fun NavGraph(
                 }
             )
         }
+
+        composable(route = NavigationScreen.Favorites.route) {
+            FavoritesScreen(
+                onDriverClick = { driverId ->
+                    navController.navigate(NavigationScreen.DriverDetail.createRoute(driverId))
+                }
+            )
+        }
+
         composable(route = NavigationScreen.News.route) {
             NewsScreen(
                 onNewsClick = { newsUrl ->
