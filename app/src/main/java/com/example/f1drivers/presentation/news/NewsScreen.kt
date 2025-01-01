@@ -43,6 +43,7 @@ fun NewsScreen(
     Box(
         modifier = Modifier
             .fillMaxSize()
+            .systemBarsPadding()
             .pullRefresh(pullRefreshState)
     ) {
         when (val state = newsState) {

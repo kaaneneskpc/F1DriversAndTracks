@@ -27,8 +27,10 @@ fun DriverDetailScreen(
 
     Scaffold(
         modifier = Modifier.fillMaxSize(),
+        contentWindowInsets = WindowInsets(0, 0, 0, 0),
         topBar = {
             CenterAlignedTopAppBar(
+                modifier = Modifier.statusBarsPadding(),
                 title = { 
                     Text(
                         text = "Driver Details",

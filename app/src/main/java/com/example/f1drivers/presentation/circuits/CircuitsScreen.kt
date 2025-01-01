@@ -16,26 +16,32 @@ import com.example.f1drivers.presentation.circuits.components.CircuitListItem
 fun CircuitsScreen(
     onCircuitClick: (Int) -> Unit
 ) {
-    LazyColumn(
-        modifier = Modifier.fillMaxSize(),
-        contentPadding = PaddingValues(16.dp),
-        verticalArrangement = Arrangement.spacedBy(12.dp)
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .systemBarsPadding()
     ) {
-        item {
-            Text(
-                text = "2024 F1 Race Calendar",
-                style = MaterialTheme.typography.headlineMedium,
-                fontWeight = FontWeight.Bold,
-                color = MaterialTheme.colorScheme.onBackground,
-                modifier = Modifier.padding(bottom = 16.dp, top = 16.dp)
-            )
-        }
-        
-        items(CircuitsData.circuits) { circuit ->
-            CircuitListItem(
-                circuit = circuit,
-                onItemClick = { onCircuitClick(it.id) }
-            )
+        LazyColumn(
+            modifier = Modifier.fillMaxSize(),
+            contentPadding = PaddingValues(16.dp),
+            verticalArrangement = Arrangement.spacedBy(12.dp)
+        ) {
+            item {
+                Text(
+                    text = "2024 F1 Race Calendar",
+                    style = MaterialTheme.typography.headlineMedium,
+                    fontWeight = FontWeight.Bold,
+                    color = MaterialTheme.colorScheme.onBackground,
+                    modifier = Modifier.padding(bottom = 16.dp, top = 16.dp)
+                )
+            }
+            
+            items(CircuitsData.circuits) { circuit ->
+                CircuitListItem(
+                    circuit = circuit,
+                    onItemClick = { onCircuitClick(it.id) }
+                )
+            }
         }
     }
 } 
