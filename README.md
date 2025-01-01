@@ -52,7 +52,7 @@ F1 Drivers App is your one-stop destination for everything Formula 1. Stay updat
 - Responsive layout
 
 ## Screenshots
-[Screenshots will be added]
+[Screen_recording_20250102_011647.webm](https://github.com/user-attachments/assets/45f2b0fb-75f6-49c0-ad58-391c8a1cde62)
 
 ## Installation
 
