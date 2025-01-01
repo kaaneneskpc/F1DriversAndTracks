@@ -17,8 +17,8 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.f1drivers.presentation.home.HomeViewModel
 import com.example.f1drivers.presentation.home.DriversState
-import com.example.f1drivers.presentation.home.DriverListItem
 import com.example.f1drivers.presentation.common.GradientBackground
+import com.example.f1drivers.presentation.home.components.DriverListItem
 
 @Composable
 fun FavoritesScreen(
