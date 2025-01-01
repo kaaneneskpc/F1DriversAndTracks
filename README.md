@@ -4,8 +4,7 @@ A modern Android application that provides comprehensive information about Formu
 
 ## Overview
 
-![image](https://github.com/user-attachments/assets/b7870e88-f604-42c7-bc3c-975b8fd0c33a)
-
+![image](https://github.com/user-attachments/assets/0956b40d-e60d-4fe2-8bc3-e0589f6075e8)
 
 F1 Drivers App is your one-stop destination for everything Formula 1. Stay updated with the latest driver information, explore famous circuits, and keep track of your favorite drivers.
 
