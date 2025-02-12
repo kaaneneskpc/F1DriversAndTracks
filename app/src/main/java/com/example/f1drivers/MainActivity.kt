@@ -23,7 +23,7 @@ import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.example.f1drivers.navigation.NavGraph
-import com.example.f1drivers.navigation.NavigationScreen
+import com.example.f1drivers.navigation.Screen
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -50,25 +50,25 @@ fun MainScreen() {
     val currentRoute = navBackStackEntry?.destination?.route
 
     val bottomNavItems = listOf(
-        Triple(NavigationScreen.Home.route, "Home", Icons.Default.Home),
-        Triple(NavigationScreen.News.route, "News", Icons.AutoMirrored.Filled.List),
-        Triple(NavigationScreen.Circuits.route, "Circuits", Icons.Default.Place),
-        Triple(NavigationScreen.Favorites.route, "Favorites", Icons.Default.Favorite)
+        Triple(Screen.Home, "Home", Icons.Default.Home),
+        Triple(Screen.News, "News", Icons.AutoMirrored.Filled.List),
+        Triple(Screen.Circuits, "Circuits", Icons.Default.Place),
+        Triple(Screen.Favorites, "Favorites", Icons.Default.Favorite)
     )
 
-    val isBottomBarVisible = bottomNavItems.map { it.first }.contains(currentRoute)
+    val isBottomBarVisible = Screen.shouldShowBottomBar(currentRoute)
 
     Scaffold(
         bottomBar = {
             if (isBottomBarVisible) {
                 NavigationBar {
-                    bottomNavItems.forEach { (route, title, icon) ->
+                    bottomNavItems.forEach { (screen, title, icon) ->
                         NavigationBarItem(
                             icon = { Icon(icon, contentDescription = title) },
                             label = { Text(title) },
-                            selected = currentRoute == route,
+                            selected = Screen.getRoute(screen) == currentRoute,
                             onClick = {
-                                navController.navigate(route) {
+                                navController.navigate(screen) {
                                     popUpTo(navController.graph.findStartDestination().id) {
                                         saveState = true
                                     }
