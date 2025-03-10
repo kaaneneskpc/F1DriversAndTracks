@@ -393,6 +393,10 @@ dependencies {
 - Jetpack Compose team for the modern UI toolkit
 - Material Design team for design guidelines
 
+## 📝 License
+
+This project is open-source and available under the [MIT License](LICENSE).
+
 ## Contact
 
 **Kaan Enes Kapıcı**
