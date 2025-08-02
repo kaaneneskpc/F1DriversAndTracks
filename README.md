@@ -108,8 +108,8 @@ The project follows Clean Architecture principles and is organized into three ma
 - Bottom navigation bar with standings integration
 - Back button navigation for detail screens
 
-## App Content Video
-[Screen_recording_20250102_011647.webm](https://github.com/user-attachments/assets/45f2b0fb-75f6-49c0-ad58-391c8a1cde62)
+## Screenshots
+<img src="https://github.com/user-attachments/assets/2b47f88d-5230-4b0c-b3ec-15adf053de5f" height = "600px"/> | <img src="https://github.com/user-attachments/assets/5e7b5ea9-c7b1-402d-b8ee-3274a304b061" height = "600px"/> | <img src="https://github.com/user-attachments/assets/92cb7c9b-f41d-4486-8261-9f6a9fb0339e" height = "600px"/> | <img src="hhttps://github.com/user-attachments/assets/a865c278-6a43-45cf-bd5d-730f5183b0d4" height = "600px"/> |  <img src="https://github.com/user-attachments/assets/7b4da30f-de88-4652-bec1-962e37204e05" height = "600px"/>  | <img src="https://github.com/user-attachments/assets/2cb22b13-61ba-4ae8-ae85-f170d4c74cbc" height = "600px"/> |  <img src="https://github.com/user-attachments/assets/45c269cb-789e-4f96-9ec2-3509f0a5e421" height = "600px"/> |  <img src="https://github.com/user-attachments/assets/871b68ad-87c9-4687-9b65-1dfc1787138d" height = "600px"/> |  <img src="https://github.com/user-attachments/assets/14f65d73-958c-4187-994a-a5cb695c87b7" height = "600px"/>
 
 ## Installation
 
