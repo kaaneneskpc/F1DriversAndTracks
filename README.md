@@ -6,7 +6,7 @@ A modern Android application that provides comprehensive information about Formu
 
 ![image](https://github.com/user-attachments/assets/0956b40d-e60d-4fe2-8bc3-e0589f6075e8)
 
-F1 Drivers App is your one-stop destination for everything Formula 1. Stay updated with the latest driver information, explore famous circuits, and keep track of your favorite drivers.
+F1 Drivers App is your comprehensive Formula 1 companion. Stay updated with the latest driver information, explore famous circuits, track your favorite drivers, and get real-time standings and race results from the 2025 F1 season. The app provides detailed race analysis, driver statistics, and team standings based on official Formula 1 data.
 
 ## Tech Stack
 
@@ -18,6 +18,10 @@ F1 Drivers App is your one-stop destination for everything Formula 1. Stay updat
 - **Kotlin Coroutines & Flow** - Asynchronous programming
 - **Clean Architecture** - Project architecture pattern
 - **MVVM** - Presentation layer pattern
+- **Navigation Compose** - Type-safe navigation
+- **Coil** - Image loading and caching
+- **Retrofit** - Network API calls
+- **Serialization** - JSON data handling
 
 ## Architecture Details
 
@@ -45,10 +49,13 @@ The project follows Clean Architecture principles and is organized into three ma
 
 ### Key Components
 - **Dependency Injection**: Hilt for dependency management
-- **Navigation**: Jetpack Navigation Compose
+- **Navigation**: Jetpack Navigation Compose with type-safe routes
 - **Database**: Room for local storage
 - **Network**: Retrofit for API calls
 - **Asynchronous Operations**: Coroutines and Flow
+- **Image Loading**: Coil for efficient image caching
+- **State Management**: MutableState for reactive UI updates
+- **Tab Navigation**: Material 3 TabRow for standings organization
 
 ## Features
 
@@ -69,6 +76,26 @@ The project follows Clean Architecture principles and is organized into three ma
 - Detailed circuit information
 - Circuit characteristics and history
 - Visual circuit layouts
+- Back navigation from circuit details
+
+### 🏆 Standings
+- **Driver Standings**: Complete 2025 F1 driver standings with points and positions
+- **Team Standings**: Constructor standings with team points and rankings
+- **Race Winners**: List of all 2025 race winners with detailed information
+- **Tab Layout**: Organized view with Drivers, Teams, and Winners tabs
+- **Real-time Data**: Based on official Formula 1 website results
+
+### 🏁 Race Results
+- **Detailed Race Results**: Complete race results for 2025 season races
+- **Australia Grand Prix**: Full race results with all driver positions
+- **China Grand Prix**: Complete race data and driver standings
+- **Japan Grand Prix**: Detailed race results and timing
+- **Bahrain Grand Prix**: Full race analysis and driver performance
+- **Saudi Arabia Grand Prix**: Complete race results and statistics
+- **Table Format**: Organized race results in easy-to-read table format
+- **Driver Images**: Visual representation with driver and team images
+- **Points System**: Accurate F1 points distribution
+- **Navigation**: Easy navigation between different race results
 
 ### 🎨 UI/UX
 - Modern Material 3 design
@@ -77,6 +104,9 @@ The project follows Clean Architecture principles and is organized into three ma
 - Intuitive navigation
 - Gradient backgrounds
 - Responsive layout
+- Tab-based navigation for standings
+- Bottom navigation bar with standings integration
+- Back button navigation for detail screens
 
 ## App Content Video
 [Screen_recording_20250102_011647.webm](https://github.com/user-attachments/assets/45f2b0fb-75f6-49c0-ad58-391c8a1cde62)
@@ -372,9 +402,10 @@ dependencies {
 
 ## Acknowledgments
 
-- Formula 1 for drivers and tracks inspiration
+- Formula 1 for drivers, tracks, and official race data inspiration
 - Jetpack Compose team for the modern UI toolkit
 - Material Design team for design guidelines
+- Official F1 website for 2025 season data and standings
 
 ## 📝 License
 
