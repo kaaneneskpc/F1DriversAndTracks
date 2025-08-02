@@ -235,9 +235,9 @@ private fun getTeamColors(team: String): Pair<Color, Color> {
         "aston martin" -> Pair(Color(0xFF006F62), Color(0xFF00594F))
         "alpine" -> Pair(Color(0xFF0090FF), Color(0xFFFF0000))
         "williams" -> Pair(Color(0xFF005AFF), Color(0xFF00A0DE))
-        "rb" -> Pair(Color(0xFF2B4562), Color(0xFFFFFFFF))
+        "racing bulls" -> Pair(Color(0xFF2B4562), Color(0xFFFFFFFF))
         "kick sauber" -> Pair(Color(0xFF1B4D3E), Color(0xFF2ECC71))
-        "haas f1 team" -> Pair(Color(0xFF242424), Color(0xFFB40000))
+        "haas" -> Pair(Color(0xFF242424), Color(0xFFB40000))
         else -> Pair(Color(0xFF1E1E1E), Color(0xFF454545))
     }
 } 

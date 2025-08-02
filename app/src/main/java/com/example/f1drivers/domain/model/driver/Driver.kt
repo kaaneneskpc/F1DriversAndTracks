@@ -9,7 +9,7 @@ data class Driver(
     val imageUrl: String,
     val polePositions: Int,
     val championships: Int,
-    val victories: Int,
-    val age: Int,
+    val careerPoints: Int,
+    val podiums: Int,
     val nationality: String
 ) 

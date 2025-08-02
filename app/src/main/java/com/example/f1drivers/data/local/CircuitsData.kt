@@ -31,11 +31,11 @@ object CircuitsData {
                 "High tire degradation"
             ),
             previousWinners = listOf(
+                PreviousWinner(2024, "Max Verstappen", "Red Bull Racing"),
                 PreviousWinner(2023, "Max Verstappen", "Red Bull Racing"),
                 PreviousWinner(2022, "Charles Leclerc", "Ferrari"),
                 PreviousWinner(2021, "Lewis Hamilton", "Mercedes"),
-                PreviousWinner(2020, "Lewis Hamilton", "Mercedes"),
-                PreviousWinner(2019, "Lewis Hamilton", "Mercedes")
+                PreviousWinner(2020, "Lewis Hamilton", "Mercedes")
             ),
             weatherConditions = WeatherInfo(
                 averageTemperature = "26°C",
@@ -45,7 +45,7 @@ object CircuitsData {
                 conditions = "Clear"
             ),
             raceSchedule = RaceSchedule(
-                raceDay = "March 2, 2024",
+                raceDay = "March 2, 2025",
                 sessions = listOf(
                     SessionInfo(
                         name = "Practice 1",
@@ -76,7 +76,7 @@ object CircuitsData {
             )
         ),
         Circuit(
-            id = 2,
+            id = 5,
             name = "Jeddah Corniche Circuit",
             country = "Saudi Arabia",
             imageUrl = "https://media.formula1.com/image/upload/f_auto/q_auto/v1677245034/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Saudi%20Arabia%20carbon.png",
@@ -98,6 +98,7 @@ object CircuitsData {
                 "Low tire degradation"
             ),
             previousWinners = listOf(
+                PreviousWinner(2024, "Oscar Piastri", "McLaren"),
                 PreviousWinner(2023, "Sergio Perez", "Red Bull Racing"),
                 PreviousWinner(2022, "Max Verstappen", "Red Bull Racing"),
                 PreviousWinner(2021, "Lewis Hamilton", "Mercedes")
@@ -110,7 +111,7 @@ object CircuitsData {
                 conditions = "Clear"
             ),
             raceSchedule = RaceSchedule(
-                raceDay = "March 9, 2024",
+                raceDay = "April 20, 2025",
                 sessions = listOf(
                     SessionInfo(
                         name = "Practice 1",
@@ -141,7 +142,7 @@ object CircuitsData {
             )
         ),
         Circuit(
-            id = 3,
+            id = 2,
             name = "Albert Park Circuit",
             country = "Australia",
             imageUrl = "https://media.formula1.com/image/upload/f_auto/q_auto/v1677245034/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Australia%20carbon.png",
@@ -163,6 +164,7 @@ object CircuitsData {
                 "Technical middle sector"
             ),
             previousWinners = listOf(
+                PreviousWinner(2024, "Lando Norris", "McLaren"),
                 PreviousWinner(2023, "Max Verstappen", "Red Bull Racing"),
                 PreviousWinner(2022, "Charles Leclerc", "Ferrari"),
                 PreviousWinner(2019, "Valtteri Bottas", "Mercedes")
@@ -175,7 +177,7 @@ object CircuitsData {
                 conditions = "Partly Cloudy"
             ),
             raceSchedule = RaceSchedule(
-                raceDay = "March 24, 2024",
+                raceDay = "March 16, 2025",
                 sessions = listOf(
                     SessionInfo(
                         name = "Practice 1",
@@ -228,6 +230,7 @@ object CircuitsData {
                 "Challenging in wet conditions"
             ),
             previousWinners = listOf(
+                PreviousWinner(2024, "Max Verstappen", "Red Bull Racing"),
                 PreviousWinner(2023, "Max Verstappen", "Red Bull Racing"),
                 PreviousWinner(2022, "Max Verstappen", "Red Bull Racing"),
                 PreviousWinner(2019, "Valtteri Bottas", "Mercedes")
@@ -240,7 +243,7 @@ object CircuitsData {
                 conditions = "Variable"
             ),
             raceSchedule = RaceSchedule(
-                raceDay = "April 7, 2024",
+                raceDay = "April 6, 2025",
                 sessions = listOf(
                     SessionInfo("Practice 1", "Friday", "11:30"),
                     SessionInfo("Practice 2", "Friday", "15:00"),
@@ -251,7 +254,7 @@ object CircuitsData {
             )
         ),
         Circuit(
-            id = 5,
+            id = 3,
             name = "Shanghai International Circuit",
             country = "China",
             imageUrl = "https://media.formula1.com/image/upload/f_auto/q_auto/v1677245034/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/China%20carbon.png",
@@ -273,6 +276,7 @@ object CircuitsData {
                 "Variable weather conditions"
             ),
             previousWinners = listOf(
+                PreviousWinner(2024, "Oscar Piastri", "McLaren"),
                 PreviousWinner(2019, "Lewis Hamilton", "Mercedes"),
                 PreviousWinner(2018, "Daniel Ricciardo", "Red Bull Racing"),
                 PreviousWinner(2017, "Lewis Hamilton", "Mercedes")
@@ -285,7 +289,7 @@ object CircuitsData {
                 conditions = "Overcast"
             ),
             raceSchedule = RaceSchedule(
-                raceDay = "April 21, 2024",
+                raceDay = "March 23, 2025",
                 sessions = listOf(
                     SessionInfo("Practice 1", "Friday", "11:30"),
                     SessionInfo("Practice 2", "Friday", "15:00"),
@@ -318,6 +322,7 @@ object CircuitsData {
                 "Challenging surface"
             ),
             previousWinners = listOf(
+                PreviousWinner(2024, "Oscar Piastri", "McLaren"),
                 PreviousWinner(2023, "Max Verstappen", "Red Bull Racing"),
                 PreviousWinner(2022, "Max Verstappen", "Red Bull Racing")
             ),
@@ -329,7 +334,7 @@ object CircuitsData {
                 conditions = "Hot and Humid"
             ),
             raceSchedule = RaceSchedule(
-                raceDay = "May 5, 2024",
+                raceDay = "May 4, 2025",
                 sessions = listOf(
                     SessionInfo("Practice 1", "Friday", "14:30"),
                     SessionInfo("Practice 2", "Friday", "18:00"),
@@ -362,6 +367,7 @@ object CircuitsData {
                 "Historic track"
             ),
             previousWinners = listOf(
+                PreviousWinner(2024, "Max Verstappen", "Red Bull Racing"),
                 PreviousWinner(2022, "Max Verstappen", "Red Bull Racing"),
                 PreviousWinner(2021, "Max Verstappen", "Red Bull Racing"),
                 PreviousWinner(2020, "Lewis Hamilton", "Mercedes")
@@ -374,7 +380,7 @@ object CircuitsData {
                 conditions = "Variable"
             ),
             raceSchedule = RaceSchedule(
-                raceDay = "May 19, 2024",
+                raceDay = "May 18, 2025",
                 sessions = listOf(
                     SessionInfo("Practice 1", "Friday", "13:30"),
                     SessionInfo("Practice 2", "Friday", "17:00"),
@@ -407,6 +413,7 @@ object CircuitsData {
                 "Prestigious event"
             ),
             previousWinners = listOf(
+                PreviousWinner(2024, "Lando Norris", "McLaren"),
                 PreviousWinner(2023, "Max Verstappen", "Red Bull Racing"),
                 PreviousWinner(2022, "Sergio Perez", "Red Bull Racing"),
                 PreviousWinner(2021, "Max Verstappen", "Red Bull Racing")
@@ -419,7 +426,7 @@ object CircuitsData {
                 conditions = "Sunny"
             ),
             raceSchedule = RaceSchedule(
-                raceDay = "May 26, 2024",
+                raceDay = "May 25, 2025",
                 sessions = listOf(
                     SessionInfo("Practice 1", "Thursday", "13:30"),
                     SessionInfo("Practice 2", "Thursday", "17:00"),
@@ -452,6 +459,7 @@ object CircuitsData {
                 "Weather-dependent track"
             ),
             previousWinners = listOf(
+                PreviousWinner(2024, "George Russell", "Mercedes"),
                 PreviousWinner(2023, "Max Verstappen", "Red Bull Racing"),
                 PreviousWinner(2022, "Max Verstappen", "Red Bull Racing"),
                 PreviousWinner(2019, "Lewis Hamilton", "Mercedes")
@@ -464,7 +472,7 @@ object CircuitsData {
                 conditions = "Partly Cloudy"
             ),
             raceSchedule = RaceSchedule(
-                raceDay = "June 9, 2024",
+                raceDay = "June 15, 2025",
                 sessions = listOf(
                     SessionInfo("Practice 1", "Friday", "13:30"),
                     SessionInfo("Practice 2", "Friday", "17:00"),
@@ -497,6 +505,7 @@ object CircuitsData {
                 "High tire wear"
             ),
             previousWinners = listOf(
+                PreviousWinner(2024, "Oscar Piastri", "McLaren"),
                 PreviousWinner(2023, "Max Verstappen", "Red Bull Racing"),
                 PreviousWinner(2022, "Max Verstappen", "Red Bull Racing"),
                 PreviousWinner(2021, "Lewis Hamilton", "Mercedes")
@@ -509,7 +518,7 @@ object CircuitsData {
                 conditions = "Sunny"
             ),
             raceSchedule = RaceSchedule(
-                raceDay = "June 23, 2024",
+                raceDay = "June 1, 2025",
                 sessions = listOf(
                     SessionInfo("Practice 1", "Friday", "13:30"),
                     SessionInfo("Practice 2", "Friday", "17:00"),
@@ -542,6 +551,7 @@ object CircuitsData {
                 "High-speed corners"
             ),
             previousWinners = listOf(
+                PreviousWinner(2024, "Lando Norris", "McLaren"),
                 PreviousWinner(2023, "Max Verstappen", "Red Bull Racing"),
                 PreviousWinner(2022, "Charles Leclerc", "Ferrari"),
                 PreviousWinner(2021, "Max Verstappen", "Red Bull Racing")
@@ -554,7 +564,7 @@ object CircuitsData {
                 conditions = "Variable"
             ),
             raceSchedule = RaceSchedule(
-                raceDay = "June 30, 2024",
+                raceDay = "June 29, 2025",
                 sessions = listOf(
                     SessionInfo("Practice 1", "Friday", "13:30"),
                     SessionInfo("Practice 2", "Friday", "17:00"),
@@ -587,6 +597,7 @@ object CircuitsData {
                 "Strong aerodynamic demands"
             ),
             previousWinners = listOf(
+                PreviousWinner(2024, "Lando Norris", "McLaren"),
                 PreviousWinner(2023, "Max Verstappen", "Red Bull Racing"),
                 PreviousWinner(2022, "Carlos Sainz", "Ferrari"),
                 PreviousWinner(2021, "Lewis Hamilton", "Mercedes")
@@ -599,7 +610,7 @@ object CircuitsData {
                 conditions = "Changeable"
             ),
             raceSchedule = RaceSchedule(
-                raceDay = "July 7, 2024",
+                raceDay = "July 6, 2025",
                 sessions = listOf(
                     SessionInfo("Practice 1", "Friday", "13:30"),
                     SessionInfo("Practice 2", "Friday", "17:00"),
@@ -632,6 +643,7 @@ object CircuitsData {
                 "Technical driving required"
             ),
             previousWinners = listOf(
+                PreviousWinner(2024, "Oscar Piastri", "McLaren"),
                 PreviousWinner(2023, "Max Verstappen", "Red Bull Racing"),
                 PreviousWinner(2022, "Max Verstappen", "Red Bull Racing"),
                 PreviousWinner(2021, "Esteban Ocon", "Alpine")
@@ -644,7 +656,7 @@ object CircuitsData {
                 conditions = "Hot and Sunny"
             ),
             raceSchedule = RaceSchedule(
-                raceDay = "July 21, 2024",
+                raceDay = "August 3, 2025",
                 sessions = listOf(
                     SessionInfo("Practice 1", "Friday", "13:30"),
                     SessionInfo("Practice 2", "Friday", "17:00"),
@@ -677,6 +689,7 @@ object CircuitsData {
                 "Historic track"
             ),
             previousWinners = listOf(
+                PreviousWinner(2024, "Oscar Piastri", "McLaren"),
                 PreviousWinner(2023, "Max Verstappen", "Red Bull Racing"),
                 PreviousWinner(2022, "Max Verstappen", "Red Bull Racing"),
                 PreviousWinner(2021, "Max Verstappen", "Red Bull Racing")
@@ -689,7 +702,7 @@ object CircuitsData {
                 conditions = "Unpredictable"
             ),
             raceSchedule = RaceSchedule(
-                raceDay = "July 28, 2024",
+                raceDay = "July 27, 2025",
                 sessions = listOf(
                     SessionInfo("Practice 1", "Friday", "13:30"),
                     SessionInfo("Practice 2", "Friday", "17:00"),
@@ -722,6 +735,7 @@ object CircuitsData {
                 "Limited overtaking"
             ),
             previousWinners = listOf(
+                PreviousWinner(2024, "Max Verstappen", "Red Bull Racing"),
                 PreviousWinner(2023, "Max Verstappen", "Red Bull Racing"),
                 PreviousWinner(2022, "Max Verstappen", "Red Bull Racing"),
                 PreviousWinner(2021, "Max Verstappen", "Red Bull Racing")
@@ -734,7 +748,7 @@ object CircuitsData {
                 conditions = "Windy"
             ),
             raceSchedule = RaceSchedule(
-                raceDay = "August 25, 2024",
+                raceDay = "August 31, 2025",
                 sessions = listOf(
                     SessionInfo("Practice 1", "Friday", "13:30"),
                     SessionInfo("Practice 2", "Friday", "17:00"),
@@ -767,6 +781,7 @@ object CircuitsData {
                 "Heavy braking zones"
             ),
             previousWinners = listOf(
+                PreviousWinner(2024, "Max Verstappen", "Red Bull Racing"),
                 PreviousWinner(2023, "Max Verstappen", "Red Bull Racing"),
                 PreviousWinner(2022, "Max Verstappen", "Red Bull Racing"),
                 PreviousWinner(2021, "Daniel Ricciardo", "McLaren")
@@ -779,7 +794,7 @@ object CircuitsData {
                 conditions = "Sunny"
             ),
             raceSchedule = RaceSchedule(
-                raceDay = "September 1, 2024",
+                raceDay = "September 7, 2025",
                 sessions = listOf(
                     SessionInfo("Practice 1", "Friday", "13:30"),
                     SessionInfo("Practice 2", "Friday", "17:00"),
@@ -824,7 +839,7 @@ object CircuitsData {
                 conditions = "Hot and Humid"
             ),
             raceSchedule = RaceSchedule(
-                raceDay = "September 22, 2024",
+                raceDay = "October 5, 2025",
                 sessions = listOf(
                     SessionInfo("Practice 1", "Friday", "17:30"),
                     SessionInfo("Practice 2", "Friday", "21:00"),
@@ -836,51 +851,52 @@ object CircuitsData {
         ),
         Circuit(
             id = 18,
-            name = "Suzuka Circuit",
-            country = "Japan",
-            imageUrl = "https://media.formula1.com/image/upload/f_auto/q_auto/v1677245034/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Japan%20carbon.png",
-            length = "5.807 km",
-            numberOfLaps = 53,
-            lapRecord = "1:30.983",
-            lapRecordHolder = "Lewis Hamilton (2019)",
-            firstGrandPrix = 1987,
-            description = "A favorite among drivers and fans alike, Suzuka's unique figure-of-eight layout features some of F1's most challenging corners. The legendary 130R and the Spoon Curve are just two of the highlights of this technical masterpiece.",
-            circuitMapUrl = "https://media.formula1.com/image/upload/f_auto/q_auto/v1677244887/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Japan_Circuit.png",
-            numberOfCorners = 18,
+            name = "Baku City Circuit",
+            country = "Azerbaijan",
+            imageUrl = "https://media.formula1.com/image/upload/f_auto/q_auto/v1677245034/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Azerbaijan%20carbon.png",
+            length = "6.003 km",
+            numberOfLaps = 51,
+            lapRecord = "1:43.009",
+            lapRecordHolder = "Charles Leclerc (2019)",
+            firstGrandPrix = 2016,
+            description = "The Baku City Circuit is one of F1's most unique street circuits. Running through the historic city center and along the Caspian Sea, the track features a mix of tight corners and long straights, including the longest straight in F1.",
+            circuitMapUrl = "https://media.formula1.com/image/upload/f_auto/q_auto/v1677244887/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Azerbaijan_Circuit.png",
+            numberOfCorners = 20,
             numberOfDrsZones = 2,
-            raceDistance = "307.471 km",
+            raceDistance = "306.049 km",
             characteristics = listOf(
-                "Figure-of-eight layout",
-                "High-speed corners",
-                "Technical challenge",
-                "Traditional circuit",
-                "Demanding on tires"
+                "Street circuit",
+                "Longest straight in F1",
+                "Narrow sections",
+                "High-speed sections",
+                "Unpredictable racing"
             ),
             previousWinners = listOf(
-                PreviousWinner(2023, "Max Verstappen", "Red Bull Racing"),
+                PreviousWinner(2024, "Max Verstappen", "Red Bull Racing"),
+                PreviousWinner(2023, "Sergio Perez", "Red Bull Racing"),
                 PreviousWinner(2022, "Max Verstappen", "Red Bull Racing"),
-                PreviousWinner(2019, "Valtteri Bottas", "Mercedes")
+                PreviousWinner(2021, "Sergio Perez", "Red Bull Racing")
             ),
             weatherConditions = WeatherInfo(
                 averageTemperature = "22°C",
-                chanceOfRain = "35%",
-                humidity = "70%",
-                windSpeed = "10 km/h",
-                conditions = "Variable"
+                chanceOfRain = "15%",
+                humidity = "55%",
+                windSpeed = "12 km/h",
+                conditions = "Clear"
             ),
             raceSchedule = RaceSchedule(
-                raceDay = "April 7, 2024",
+                raceDay = "September 21, 2025",
                 sessions = listOf(
-                    SessionInfo("Practice 1", "Friday", "11:30"),
-                    SessionInfo("Practice 2", "Friday", "15:00"),
-                    SessionInfo("Practice 3", "Saturday", "11:30"),
-                    SessionInfo("Qualifying", "Saturday", "15:00"),
-                    SessionInfo("Race", "Sunday", "14:00")
+                    SessionInfo("Practice 1", "Friday", "17:30"),
+                    SessionInfo("Practice 2", "Friday", "21:00"),
+                    SessionInfo("Practice 3", "Saturday", "17:30"),
+                    SessionInfo("Qualifying", "Saturday", "21:00"),
+                    SessionInfo("Race", "Sunday", "20:00")
                 )
             )
         ),
         Circuit(
-            id = 19,
+            id = 20,
             name = "Circuit of The Americas",
             country = "USA",
             imageUrl = "https://media.formula1.com/image/upload/f_auto/q_auto/v1677245034/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/United%20States%20carbon.png",
@@ -902,6 +918,7 @@ object CircuitsData {
                 "Modern facilities"
             ),
             previousWinners = listOf(
+                PreviousWinner(2024, "Max Verstappen", "Red Bull Racing"),
                 PreviousWinner(2023, "Max Verstappen", "Red Bull Racing"),
                 PreviousWinner(2022, "Max Verstappen", "Red Bull Racing"),
                 PreviousWinner(2021, "Max Verstappen", "Red Bull Racing")
@@ -914,7 +931,7 @@ object CircuitsData {
                 conditions = "Sunny"
             ),
             raceSchedule = RaceSchedule(
-                raceDay = "October 20, 2024",
+                raceDay = "October 19, 2025",
                 sessions = listOf(
                     SessionInfo("Practice 1", "Friday", "13:30"),
                     SessionInfo("Practice 2", "Friday", "17:00"),
@@ -925,7 +942,7 @@ object CircuitsData {
             )
         ),
         Circuit(
-            id = 20,
+            id = 21,
             name = "Autódromo Hermanos Rodríguez",
             country = "Mexico",
             imageUrl = "https://media.formula1.com/image/upload/f_auto/q_auto/v1677245034/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Mexico%20carbon.png",
@@ -947,6 +964,7 @@ object CircuitsData {
                 "Technical middle sector"
             ),
             previousWinners = listOf(
+                PreviousWinner(2024, "Max Verstappen", "Red Bull Racing"),
                 PreviousWinner(2023, "Max Verstappen", "Red Bull Racing"),
                 PreviousWinner(2022, "Max Verstappen", "Red Bull Racing"),
                 PreviousWinner(2021, "Max Verstappen", "Red Bull Racing")
@@ -959,7 +977,7 @@ object CircuitsData {
                 conditions = "Clear"
             ),
             raceSchedule = RaceSchedule(
-                raceDay = "October 27, 2024",
+                raceDay = "October 26, 2025",
                 sessions = listOf(
                     SessionInfo("Practice 1", "Friday", "13:30"),
                     SessionInfo("Practice 2", "Friday", "17:00"),
@@ -970,7 +988,7 @@ object CircuitsData {
             )
         ),
         Circuit(
-            id = 21,
+            id = 22,
             name = "Interlagos Circuit",
             country = "Brazil",
             imageUrl = "https://media.formula1.com/image/upload/f_auto/q_auto/v1677245034/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Brazil%20carbon.png",
@@ -992,6 +1010,7 @@ object CircuitsData {
                 "Technical infield"
             ),
             previousWinners = listOf(
+                PreviousWinner(2024, "Max Verstappen", "Red Bull Racing"),
                 PreviousWinner(2023, "Max Verstappen", "Red Bull Racing"),
                 PreviousWinner(2022, "George Russell", "Mercedes"),
                 PreviousWinner(2021, "Lewis Hamilton", "Mercedes")
@@ -1004,7 +1023,7 @@ object CircuitsData {
                 conditions = "Variable"
             ),
             raceSchedule = RaceSchedule(
-                raceDay = "November 3, 2024",
+                raceDay = "November 9, 2025",
                 sessions = listOf(
                     SessionInfo("Practice 1", "Friday", "13:30"),
                     SessionInfo("Practice 2", "Friday", "17:00"),
@@ -1015,7 +1034,7 @@ object CircuitsData {
             )
         ),
         Circuit(
-            id = 22,
+            id = 23,
             name = "Las Vegas Street Circuit",
             country = "USA",
             imageUrl = "https://media.formula1.com/image/upload/f_auto/q_auto/v1677245034/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Las%20Vegas%20carbon.png",
@@ -1037,6 +1056,7 @@ object CircuitsData {
                 "High-speed sections"
             ),
             previousWinners = listOf(
+                PreviousWinner(2024, "Max Verstappen", "Red Bull Racing"),
                 PreviousWinner(2023, "Max Verstappen", "Red Bull Racing")
             ),
             weatherConditions = WeatherInfo(
@@ -1047,7 +1067,7 @@ object CircuitsData {
                 conditions = "Cold"
             ),
             raceSchedule = RaceSchedule(
-                raceDay = "November 23, 2024",
+                raceDay = "November 23, 2025",
                 sessions = listOf(
                     SessionInfo("Practice 1", "Thursday", "20:30"),
                     SessionInfo("Practice 2", "Friday", "00:00"),
@@ -1058,7 +1078,7 @@ object CircuitsData {
             )
         ),
         Circuit(
-            id = 23,
+            id = 24,
             name = "Yas Marina Circuit",
             country = "Abu Dhabi",
             imageUrl = "https://media.formula1.com/image/upload/f_auto/q_auto/v1677245034/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Abu%20Dhabi%20carbon.png",
@@ -1080,6 +1100,7 @@ object CircuitsData {
                 "Smooth surface"
             ),
             previousWinners = listOf(
+                PreviousWinner(2024, "Max Verstappen", "Red Bull Racing"),
                 PreviousWinner(2023, "Max Verstappen", "Red Bull Racing"),
                 PreviousWinner(2022, "Max Verstappen", "Red Bull Racing"),
                 PreviousWinner(2021, "Max Verstappen", "Red Bull Racing")
@@ -1092,7 +1113,7 @@ object CircuitsData {
                 conditions = "Clear"
             ),
             raceSchedule = RaceSchedule(
-                raceDay = "December 8, 2024",
+                raceDay = "December 7, 2025",
                 sessions = listOf(
                     SessionInfo("Practice 1", "Friday", "13:30"),
                     SessionInfo("Practice 2", "Friday", "17:00"),
@@ -1103,7 +1124,7 @@ object CircuitsData {
             )
         ),
         Circuit(
-            id = 24,
+            id = 25,
             name = "Lusail International Circuit",
             country = "Qatar",
             imageUrl = "https://media.formula1.com/image/upload/f_auto/q_auto/v1677245034/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Qatar%20carbon.png",
@@ -1125,6 +1146,7 @@ object CircuitsData {
                 "Desert conditions"
             ),
             previousWinners = listOf(
+                PreviousWinner(2024, "Max Verstappen", "Red Bull Racing"),
                 PreviousWinner(2023, "Max Verstappen", "Red Bull Racing"),
                 PreviousWinner(2021, "Lewis Hamilton", "Mercedes")
             ),
@@ -1136,7 +1158,7 @@ object CircuitsData {
                 conditions = "Clear"
             ),
             raceSchedule = RaceSchedule(
-                raceDay = "December 1, 2024",
+                raceDay = "November 30, 2025",
                 sessions = listOf(
                     SessionInfo("Practice 1", "Friday", "14:30"),
                     SessionInfo("Practice 2", "Friday", "18:00"),

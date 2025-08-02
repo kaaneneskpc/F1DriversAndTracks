@@ -133,8 +133,8 @@ fun DriverDetail(driver: Driver) {
                 StatCard(
                     modifier = Modifier.weight(1f),
                     icon = Icons.Default.Speed,
-                    title = "Victories",
-                    value = driver.victories.toString(),
+                    title = "Career Points",
+                    value = driver.careerPoints.toString(),
                     teamColor = teamColor
                 )
             }
@@ -156,9 +156,9 @@ fun DriverDetail(driver: Driver) {
                         horizontalArrangement = Arrangement.SpaceBetween
                     ) {
                         DetailRow(
-                            icon = Icons.Default.Cake,
-                            title = "Age",
-                            value = driver.age.toString(),
+                            icon = Icons.Default.Star,
+                            title = "Podium",
+                            value = driver.podiums.toString(),
                             teamColor = teamColor
                         )
                         DetailRow(
