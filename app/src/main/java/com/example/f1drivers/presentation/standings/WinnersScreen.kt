@@ -104,13 +104,11 @@ private fun WinnerRow(
                 .fillMaxWidth()
                 .padding(16.dp)
         ) {
-            // Race Info Row
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                // Race Details
                 Column(
                     modifier = Modifier.weight(0.3f)
                 ) {
@@ -127,7 +125,6 @@ private fun WinnerRow(
                     )
                 }
 
-                // Winner Info
                 Column(
                     modifier = Modifier.weight(0.4f),
                     horizontalAlignment = Alignment.CenterHorizontally
@@ -165,7 +162,6 @@ private fun WinnerRow(
                     )
                 }
 
-                // Race Time
                 Column(
                     modifier = Modifier.weight(0.3f),
                     horizontalAlignment = Alignment.End

@@ -63,7 +63,6 @@ fun DriverStandingsScreen(
                     .fillMaxSize()
                     .padding(paddingValues)
             ) {
-                // Tab Row
                 TabRow(
                     selectedTabIndex = selectedTabIndex,
                     modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp),
@@ -83,8 +82,6 @@ fun DriverStandingsScreen(
                         )
                     }
                 }
-
-                // Content based on selected tab
                 when (selectedTabIndex) {
                     0 -> DriverStandingsContent(onDriverClick = onDriverClick)
                     1 -> TeamStandingsScreen(onTeamClick = onTeamClick)
@@ -195,21 +192,19 @@ private fun StandingsRow(
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
         ) {
-            // Position
             Text(
                 text = "${driver.standingsPosition}",
                 style = MaterialTheme.typography.titleLarge,
                 fontWeight = FontWeight.Bold,
                 color = when (driver.standingsPosition) {
-                    1 -> Color(0xFFFFD700) // Gold
-                    2 -> Color(0xFFC0C0C0) // Silver
-                    3 -> Color(0xFFCD7F32) // Bronze
+                    1 -> Color(0xFFFFD700)
+                    2 -> Color(0xFFC0C0C0)
+                    3 -> Color(0xFFCD7F32)
                     else -> Color(0xFF1A237E)
                 },
                 modifier = Modifier.weight(0.15f)
             )
 
-            // Driver Info
             Row(
                 modifier = Modifier.weight(0.6f),
                 verticalAlignment = Alignment.CenterVertically
@@ -236,7 +231,6 @@ private fun StandingsRow(
                 }
             }
 
-            // Team
             Text(
                 text = driver.team,
                 style = MaterialTheme.typography.bodyMedium,
@@ -244,7 +238,6 @@ private fun StandingsRow(
                 modifier = Modifier.weight(0.25f)
             )
 
-            // Points
             Text(
                 text = "${driver.standingsPoints}",
                 style = MaterialTheme.typography.titleMedium,
