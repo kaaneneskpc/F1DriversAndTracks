@@ -6,19 +6,6 @@ object DriversData {
     val drivers = mapOf(
         1 to Driver(
             id = 1,
-            firstName = "Lando",
-            lastName = "Norris",
-            number = 4,
-            team = "McLaren",
-            imageUrl = "https://media.formula1.com/content/dam/fom-website/drivers/2025drivers/norris.jpg.img.1920.medium.jpg/1708593640652.jpg",
-            polePositions = 13,
-            championships = 0,
-            careerPoints = 1257,
-            podiums = 37,
-            nationality = "British"
-        ),
-        2 to Driver(
-            id = 2,
             firstName = "Oscar",
             lastName = "Piastri",
             number = 81,
@@ -28,62 +15,27 @@ object DriversData {
             championships = 0,
             careerPoints = 655,
             podiums = 21,
-            nationality = "Australian"
+            nationality = "Australian",
+            standingsPosition = 1,
+            standingsPoints = 266
+        ),
+        2 to Driver(
+            id = 2,
+            firstName = "Lando",
+            lastName = "Norris",
+            number = 4,
+            team = "McLaren",
+            imageUrl = "https://media.formula1.com/content/dam/fom-website/drivers/2025drivers/norris.jpg.img.1920.medium.jpg/1708593640652.jpg",
+            polePositions = 13,
+            championships = 0,
+            careerPoints = 1257,
+            podiums = 37,
+            nationality = "British",
+            standingsPosition = 2,
+            standingsPoints = 250
         ),
         3 to Driver(
             id = 3,
-            firstName = "Charles",
-            lastName = "Leclerc",
-            number = 16,
-            team = "Ferrari",
-            imageUrl = "https://media.formula1.com/content/dam/fom-website/drivers/2025drivers/leclerc.jpg.img.1920.medium.jpg/1708593638650.jpg",
-            polePositions = 26,
-            championships = 0,
-            careerPoints = 1569,
-            podiums = 48,
-            nationality = "Monégasque"
-        ),
-        4 to Driver(
-            id = 4,
-            firstName = "Lewis",
-            lastName = "Hamilton",
-            number = 44,
-            team = "Ferrari",
-            imageUrl = "https://media.formula1.com/content/dam/fom-website/drivers/2025drivers/hamilton.jpg.img.1920.medium.jpg/1708592892276.jpg",
-            polePositions = 104,
-            championships = 7,
-            careerPoints = 4971,
-            podiums = 202,
-            nationality = "British"
-        ),
-        5 to Driver(
-            id = 5,
-            firstName = "George",
-            lastName = "Russell",
-            number = 63,
-            team = "Mercedes",
-            imageUrl = "https://media.formula1.com/content/dam/fom-website/drivers/2025drivers/russell.jpg.img.1920.medium.jpg/1708593642622.jpg",
-            polePositions = 6,
-            championships = 0,
-            careerPoints = 871,
-            podiums = 20,
-            nationality = "British"
-        ),
-        6 to Driver(
-            id = 6,
-            firstName = "Kimi",
-            lastName = "Antonelli",
-            number = 12,
-            team = "Mercedes",
-            imageUrl = "https://media.formula1.com/content/dam/fom-website/drivers/2025drivers/antonelli.jpg.img.1920.medium.jpg/1708593633771.jpg",
-            polePositions = 0,
-            championships = 0,
-            careerPoints = 63,
-            podiums = 1,
-            nationality = "Italian"
-        ),
-        7 to Driver(
-            id = 7,
             firstName = "Max",
             lastName = "Verstappen",
             number = 1,
@@ -93,10 +45,12 @@ object DriversData {
             championships = 4,
             careerPoints = 3208,
             podiums = 117,
-            nationality = "Dutch"
+            nationality = "Dutch",
+            standingsPosition = 3,
+            standingsPoints = 185
         ),
-        8 to Driver(
-            id = 8,
+        4 to Driver(
+            id = 4,
             firstName = "Yuki",
             lastName = "Tsunoda",
             number = 22,
@@ -106,36 +60,72 @@ object DriversData {
             championships = 0,
             careerPoints = 101,
             podiums = 0,
-            nationality = "Japanese"
+            nationality = "Japanese",
+            standingsPosition = 17,
+            standingsPoints = 10
+        ),
+        5 to Driver(
+            id = 5,
+            firstName = "Charles",
+            lastName = "Leclerc",
+            number = 16,
+            team = "Ferrari",
+            imageUrl = "https://media.formula1.com/content/dam/fom-website/drivers/2025drivers/leclerc.jpg.img.1920.medium.jpg/1708593638650.jpg",
+            polePositions = 26,
+            championships = 0,
+            careerPoints = 1569,
+            podiums = 48,
+            nationality = "Monégasque",
+            standingsPosition = 5,
+            standingsPoints = 139
+        ),
+        6 to Driver(
+            id = 6,
+            firstName = "Lewis",
+            lastName = "Hamilton",
+            number = 44,
+            team = "Ferrari",
+            imageUrl = "https://media.formula1.com/content/dam/fom-website/drivers/2025drivers/hamilton.jpg.img.1920.medium.jpg/1708592892276.jpg",
+            polePositions = 104,
+            championships = 7,
+            careerPoints = 4971,
+            podiums = 202,
+            nationality = "British",
+            standingsPosition = 6,
+            standingsPoints = 109
+        ),
+        7 to Driver(
+            id = 7,
+            firstName = "Kimi",
+            lastName = "Antonelli",
+            number = 12,
+            team = "Mercedes",
+            imageUrl = "https://media.formula1.com/content/dam/fom-website/drivers/2025drivers/antonelli.jpg.img.1920.medium.jpg/1708593633771.jpg",
+            polePositions = 0,
+            championships = 0,
+            careerPoints = 63,
+            podiums = 1,
+            nationality = "Italian",
+            standingsPosition = 7,
+            standingsPoints = 63
+        ),
+        8 to Driver(
+            id = 7,
+            firstName = "George",
+            lastName = "Russell",
+            number = 63,
+            team = "Mercedes",
+            imageUrl = "https://media.formula1.com/content/dam/fom-website/drivers/2025drivers/russell.jpg.img.1920.medium.jpg/1708593642622.jpg",
+            polePositions = 6,
+            championships = 0,
+            careerPoints = 871,
+            podiums = 20,
+            nationality = "British",
+            standingsPosition = 4,
+            standingsPoints = 157
         ),
         9 to Driver(
             id = 9,
-            firstName = "Carlos",
-            lastName = "Sainz",
-            number = 55,
-            team = "Williams",
-            imageUrl = "https://media.formula1.com/content/dam/fom-website/drivers/2025drivers/sainz.jpg.img.1920.medium.jpg/1708593644588.jpg",
-            polePositions = 6,
-            championships = 0,
-            careerPoints = 1288,
-            podiums = 27,
-            nationality = "Spanish"
-        ),
-        10 to Driver(
-            id = 10,
-            firstName = "Alexander",
-            lastName = "Albon",
-            number = 23,
-            team = "Williams",
-            imageUrl = "https://media.formula1.com/content/dam/fom-website/drivers/2025drivers/albon.jpg.img.1920.medium.jpg/1708593633771.jpg",
-            polePositions = 0,
-            championships = 0,
-            careerPoints = 294,
-            podiums = 2,
-            nationality = "Thai"
-        ),
-        11 to Driver(
-            id = 11,
             firstName = "Nico",
             lastName = "Hulkenberg",
             number = 27,
@@ -145,10 +135,12 @@ object DriversData {
             championships = 0,
             careerPoints = 608,
             podiums = 1,
-            nationality = "German"
+            nationality = "German",
+            standingsPosition = 9,
+            standingsPoints = 37
         ),
-        12 to Driver(
-            id = 12,
+        10 to Driver(
+            id = 10,
             firstName = "Gabriel",
             lastName = "Bortoleto",
             number = 5,
@@ -158,10 +150,12 @@ object DriversData {
             championships = 0,
             careerPoints = 6,
             podiums = 0,
-            nationality = "Brazilian"
+            nationality = "Brazilian",
+            standingsPosition = 19,
+            standingsPoints = 6
         ),
-        13 to Driver(
-            id = 13,
+        11 to Driver(
+            id = 11,
             firstName = "Liam",
             lastName = "Lawson",
             number = 30,
@@ -171,10 +165,12 @@ object DriversData {
             championships = 0,
             careerPoints = 22,
             podiums = 0,
-            nationality = "New Zealander"
+            nationality = "New Zealander",
+            standingsPosition = 14,
+            standingsPoints = 16
         ),
-        14 to Driver(
-            id = 14,
+        12 to Driver(
+            id = 12,
             firstName = "Isack",
             lastName = "Hadjar",
             number = 6,
@@ -186,8 +182,8 @@ object DriversData {
             podiums = 0,
             nationality = "French"
         ),
-        15 to Driver(
-            id = 15,
+        13 to Driver(
+            id = 13,
             firstName = "Fernando",
             lastName = "Alonso",
             number = 14,
@@ -197,10 +193,12 @@ object DriversData {
             championships = 2,
             careerPoints = 2353,
             podiums = 106,
-            nationality = "Spanish"
+            nationality = "Spanish",
+            standingsPosition = 15,
+            standingsPoints = 16
         ),
-        16 to Driver(
-            id = 16,
+        14 to Driver(
+            id = 14,
             firstName = "Lance",
             lastName = "Stroll",
             number = 18,
@@ -210,10 +208,12 @@ object DriversData {
             championships = 0,
             careerPoints = 312,
             podiums = 3,
-            nationality = "Canadian"
+            nationality = "Canadian",
+            standingsPosition = 13,
+            standingsPoints = 20
         ),
-        17 to Driver(
-            id = 17,
+        15 to Driver(
+            id = 15,
             firstName = "Esteban",
             lastName = "Ocon",
             number = 31,
@@ -223,10 +223,12 @@ object DriversData {
             championships = 0,
             careerPoints = 472,
             podiums = 4,
-            nationality = "French"
+            nationality = "French",
+            standingsPosition = 10,
+            standingsPoints = 27
         ),
-        18 to Driver(
-            id = 18,
+        16 to Driver(
+            id = 16,
             firstName = "Oliver",
             lastName = "Bearman",
             number = 87,
@@ -236,10 +238,12 @@ object DriversData {
             championships = 0,
             careerPoints = 15,
             podiums = 0,
-            nationality = "British"
+            nationality = "British",
+            standingsPosition = 18,
+            standingsPoints = 8
         ),
-        19 to Driver(
-            id = 19,
+        17 to Driver(
+            id = 17,
             firstName = "Pierre",
             lastName = "Gasly",
             number = 10,
@@ -249,10 +253,12 @@ object DriversData {
             championships = 0,
             careerPoints = 456,
             podiums = 5,
-            nationality = "French"
+            nationality = "French",
+            standingsPosition = 12,
+            standingsPoints = 20
         ),
-        20 to Driver(
-            id = 20,
+        18 to Driver(
+            id = 18,
             firstName = "Franco",
             lastName = "Colapinto",
             number = 43,
@@ -262,7 +268,39 @@ object DriversData {
             championships = 0,
             careerPoints = 5,
             podiums = 0,
-            nationality = "Argentine"
+            nationality = "Argentine",
+            standingsPosition = 20,
+            standingsPoints = 0
+        ),
+        19 to Driver(
+            id = 19,
+            firstName = "Alexander",
+            lastName = "Albon",
+            number = 23,
+            team = "Williams",
+            imageUrl = "https://media.formula1.com/content/dam/fom-website/drivers/2025drivers/albon.jpg.img.1920.medium.jpg/1708593633771.jpg",
+            polePositions = 0,
+            championships = 0,
+            careerPoints = 294,
+            podiums = 2,
+            nationality = "Thai",
+            standingsPosition = 8,
+            standingsPoints = 54
+        ),
+        20 to Driver(
+            id = 20,
+            firstName = "Carlos",
+            lastName = "Sainz",
+            number = 55,
+            team = "Williams",
+            imageUrl = "https://media.formula1.com/content/dam/fom-website/drivers/2025drivers/sainz.jpg.img.1920.medium.jpg/1708593644588.jpg",
+            polePositions = 6,
+            championships = 0,
+            careerPoints = 1288,
+            podiums = 27,
+            nationality = "Spanish",
+            standingsPosition = 16,
+            standingsPoints = 16
         ),
     )
 

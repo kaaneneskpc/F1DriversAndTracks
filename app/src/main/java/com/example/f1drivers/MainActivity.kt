@@ -13,6 +13,7 @@ import androidx.compose.material.icons.automirrored.filled.List
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Place
+import androidx.compose.material.icons.filled.EmojiEvents
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -52,6 +53,7 @@ fun MainScreen() {
     val bottomNavItems = listOf(
         Triple(Screen.Home, "Home", Icons.Default.Home),
         Triple(Screen.Circuits, "Circuits", Icons.Default.Place),
+        Triple(Screen.Standings, "Standings", Icons.Default.EmojiEvents),
         Triple(Screen.Favorites, "Favorites", Icons.Default.Favorite)
     )
 

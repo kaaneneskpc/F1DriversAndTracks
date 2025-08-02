@@ -11,12 +11,14 @@ import com.example.f1drivers.navigation.Screen.DriverDetail
 import com.example.f1drivers.navigation.Screen.Favorites
 import com.example.f1drivers.navigation.Screen.Home
 import com.example.f1drivers.navigation.Screen.Splash
+import com.example.f1drivers.navigation.Screen.Standings
 import com.example.f1drivers.presentation.circuits.CircuitsScreen
 import com.example.f1drivers.presentation.circuits.detail.CircuitDetailScreen
 import com.example.f1drivers.presentation.favorites.FavoritesScreen
 import com.example.f1drivers.presentation.home.HomeScreen
 import com.example.f1drivers.presentation.home.detail.DriverDetailScreen
 import com.example.f1drivers.presentation.splash.SplashScreen
+import com.example.f1drivers.presentation.standings.DriverStandingsScreen
 import kotlinx.serialization.InternalSerializationApi
 
 
@@ -74,6 +76,23 @@ fun NavGraph(
             DriverDetailScreen {
                 navController.popBackStack()
             }
+        }
+
+        composable<Standings> {
+            DriverStandingsScreen(
+                onBackClick = {
+                    navController.popBackStack()
+                },
+                onDriverClick = { driverId ->
+                    navController.navigate(DriverDetail(driverId))
+                },
+                onTeamClick = { teamId ->
+                    // TODO: Navigate to team detail screen when created
+                },
+                onRaceClick = { raceId ->
+                    // TODO: Navigate to race detail screen when created
+                }
+            )
         }
     }
 }

@@ -11,5 +11,7 @@ data class Driver(
     val championships: Int,
     val careerPoints: Int,
     val podiums: Int,
-    val nationality: String
+    val nationality: String,
+    val standingsPosition: Int? = null,
+    val standingsPoints: Int? = null
 ) 
