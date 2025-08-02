@@ -17,6 +17,10 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import com.example.f1drivers.data.local.AustraliaRaceData
+import com.example.f1drivers.data.local.ChinaRaceData
+import com.example.f1drivers.data.local.JapanRaceData
+import com.example.f1drivers.data.local.BahrainRaceData
+import com.example.f1drivers.data.local.SaudiArabiaRaceData
 import com.example.f1drivers.presentation.common.GradientBackground
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -25,7 +29,23 @@ fun RaceDetailScreen(
     raceId: Int,
     onBackClick: () -> Unit = {}
 ) {
-    val raceResults = AustraliaRaceData.raceResults
+    val raceResults = when (raceId) {
+        1 -> AustraliaRaceData.raceResults
+        2 -> ChinaRaceData.raceResults
+        3 -> JapanRaceData.raceResults
+        4 -> BahrainRaceData.raceResults
+        5 -> SaudiArabiaRaceData.raceResults
+        else -> AustraliaRaceData.raceResults
+    }
+
+    val raceTitle = when (raceId) {
+        1 -> "Australia Grand Prix 2025"
+        2 -> "China Grand Prix 2025"
+        3 -> "Japan Grand Prix 2025"
+        4 -> "Bahrain Grand Prix 2025"
+        5 -> "Saudi Arabia Grand Prix 2025"
+        else -> "Australia Grand Prix 2025"
+    }
 
     GradientBackground {
         Scaffold(
@@ -35,7 +55,7 @@ fun RaceDetailScreen(
                 TopAppBar(
                     title = {
                         Text(
-                            text = "Australia Grand Prix 2025",
+                            text = raceTitle,
                             color = Color.White,
                             style = MaterialTheme.typography.titleLarge,
                             fontWeight = FontWeight.Bold

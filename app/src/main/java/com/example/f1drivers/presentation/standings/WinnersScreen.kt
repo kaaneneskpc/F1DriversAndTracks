@@ -36,7 +36,17 @@ fun WinnersScreen(
         items(RacesData.races) { race ->
             WinnerRow(
                 race = race,
-                onClick = { onRaceClick(race.id) }
+                onClick = { 
+                    val raceId = when (race.grandPrix) {
+                        "Australia" -> 1
+                        "China" -> 2
+                        "Japan" -> 3
+                        "Bahrain" -> 4
+                        "Saudi Arabia" -> 5
+                        else -> 1
+                    }
+                    onRaceClick(raceId)
+                }
             )
         }
 
