@@ -51,7 +51,6 @@ fun MainScreen() {
 
     val bottomNavItems = listOf(
         Triple(Screen.Home, "Home", Icons.Default.Home),
-        Triple(Screen.News, "News", Icons.AutoMirrored.Filled.List),
         Triple(Screen.Circuits, "Circuits", Icons.Default.Place),
         Triple(Screen.Favorites, "Favorites", Icons.Default.Favorite)
     )

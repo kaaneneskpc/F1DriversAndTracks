@@ -10,16 +10,12 @@ import com.example.f1drivers.navigation.Screen.Circuits
 import com.example.f1drivers.navigation.Screen.DriverDetail
 import com.example.f1drivers.navigation.Screen.Favorites
 import com.example.f1drivers.navigation.Screen.Home
-import com.example.f1drivers.navigation.Screen.News
-import com.example.f1drivers.navigation.Screen.NewsDetail
 import com.example.f1drivers.navigation.Screen.Splash
 import com.example.f1drivers.presentation.circuits.CircuitsScreen
 import com.example.f1drivers.presentation.circuits.detail.CircuitDetailScreen
 import com.example.f1drivers.presentation.favorites.FavoritesScreen
 import com.example.f1drivers.presentation.home.HomeScreen
 import com.example.f1drivers.presentation.home.detail.DriverDetailScreen
-import com.example.f1drivers.presentation.news.NewsScreen
-import com.example.f1drivers.presentation.news.NewsWebViewScreen
 import com.example.f1drivers.presentation.splash.SplashScreen
 import kotlinx.serialization.InternalSerializationApi
 
@@ -58,14 +54,6 @@ fun NavGraph(
                 }
             )
         }
-
-        composable<News> {
-            NewsScreen(
-                onNewsClick = { newsUrl ->
-                    navController.navigate(NewsDetail(newsUrl))
-                }
-            )
-        }
         composable<Circuits> {
             CircuitsScreen(
                 onCircuitClick = { circuitId ->
@@ -83,15 +71,6 @@ fun NavGraph(
             DriverDetailScreen {
                 navController.popBackStack()
             }
-        }
-
-        composable<NewsDetail> {
-            val args = it.toRoute<NewsDetail>()
-            NewsWebViewScreen(
-                newsUrl = args.newsUrl,
-                onBackClick = {
-                    navController.popBackStack()
-                })
         }
     }
 }

@@ -15,9 +15,6 @@ sealed interface Screen {
     data object Home : Screen
 
     @Serializable
-    data object News : Screen
-
-    @Serializable
     data object Circuits : Screen
 
     @Serializable
@@ -29,9 +26,6 @@ sealed interface Screen {
     @Serializable
     data class CircuitDetail(val circuitId: Int) : Screen
 
-    @Serializable
-    data class NewsDetail(val newsUrl: String) : Screen
-
     companion object {
         fun getRoute(screen: Screen): String {
             return screen::class.qualifiedName.orEmpty()
@@ -39,7 +33,7 @@ sealed interface Screen {
 
         fun shouldShowBottomBar(currentRoute: String?): Boolean {
             return when (currentRoute) {
-                getRoute(Home), getRoute(News), getRoute(Circuits), getRoute(Favorites) -> true
+                getRoute(Home), getRoute(Circuits), getRoute(Favorites) -> true
                 else -> false
             }
         }

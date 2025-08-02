@@ -1,6 +1,6 @@
 # F1 Drivers App 🏎️
 
-A modern Android application that provides comprehensive information about Formula 1 drivers, circuits, and news. Built with Jetpack Compose and following clean architecture principles.
+A modern Android application that provides comprehensive information about Formula 1 drivers and circuits. Built with Jetpack Compose and following clean architecture principles.
 
 ## Overview
 
@@ -70,12 +70,6 @@ The project follows Clean Architecture principles and is organized into three ma
 - Circuit characteristics and history
 - Visual circuit layouts
 
-### 📰 News
-- Latest F1 news updates
-- News article previews
-- Web view for full article reading
-- Stay updated with F1 world
-
 ### 🎨 UI/UX
 - Modern Material 3 design
 - Dark/Light theme support
@@ -94,15 +88,8 @@ The project follows Clean Architecture principles and is organized into three ma
 - Minimum SDK Level 24
 - Target SDK Level 35
 - Gradle 8.5
-- News API Key (Required for news functionality)
 
 ### Getting Started
-1. Get a News API Key at [https://newsapi.org](https://newsapi.org)
-2. Create a `local.properties` file in the root directory if not exists
-3. Add your API key in `local.properties`:
-   ```properties
-   NEWS_API_KEY=your_api_key_here
-   ```
 
 Clone the repository
 ```kotlin
@@ -256,10 +243,6 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
-        val properties = org.jetbrains.kotlin.konan.properties.Properties()
-        properties.load(project.rootProject.file("local.properties").inputStream())
-        
-        buildConfigField("String", "NEWS_API_KEY", "\"${properties.getProperty("NEWS_API_KEY")}\"")
     }
 
     buildTypes {
