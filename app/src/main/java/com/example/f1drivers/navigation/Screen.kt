@@ -27,6 +27,9 @@ sealed interface Screen {
     data class CircuitDetail(val circuitId: Int) : Screen
 
     @Serializable
+    data class RaceDetail(val raceId: Int) : Screen
+
+    @Serializable
     data object Standings : Screen
 
     companion object {
