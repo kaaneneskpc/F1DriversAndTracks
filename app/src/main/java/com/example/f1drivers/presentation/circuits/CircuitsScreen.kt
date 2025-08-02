@@ -27,7 +27,7 @@ fun CircuitsScreen(
             item {
                 Column {
                     Text(
-                        text = "2024 F1",
+                        text = "2025 F1",
                         style = MaterialTheme.typography.headlineMedium,
                         fontWeight = FontWeight.Bold,
                         color = Color.White

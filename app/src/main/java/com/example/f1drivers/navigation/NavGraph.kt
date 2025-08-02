@@ -64,7 +64,10 @@ fun NavGraph(
         composable<CircuitDetail> {
             val args = it.toRoute<CircuitDetail>()
             CircuitDetailScreen(
-                circuitId = args.circuitId
+                circuitId = args.circuitId,
+                onBackClick = {
+                    navController.popBackStack()
+                }
             )
         }
         composable<DriverDetail> {

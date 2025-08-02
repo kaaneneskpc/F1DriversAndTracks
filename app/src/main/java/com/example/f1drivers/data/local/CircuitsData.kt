@@ -860,7 +860,7 @@ object CircuitsData {
             lapRecordHolder = "Charles Leclerc (2019)",
             firstGrandPrix = 2016,
             description = "The Baku City Circuit is one of F1's most unique street circuits. Running through the historic city center and along the Caspian Sea, the track features a mix of tight corners and long straights, including the longest straight in F1.",
-            circuitMapUrl = "https://media.formula1.com/image/upload/f_auto/q_auto/v1677244887/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Azerbaijan_Circuit.png",
+            circuitMapUrl = "https://media.formula1.com/image/upload/f_auto/q_auto/v1677244887/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Baku_Circuit.png",
             numberOfCorners = 20,
             numberOfDrsZones = 2,
             raceDistance = "306.049 km",

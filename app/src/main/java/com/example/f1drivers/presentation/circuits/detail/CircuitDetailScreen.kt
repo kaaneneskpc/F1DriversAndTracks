@@ -22,9 +22,11 @@ import coil.compose.AsyncImage
 import com.example.f1drivers.data.local.CircuitsData
 import com.example.f1drivers.presentation.common.GradientBackground
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CircuitDetailScreen(
-    circuitId: Int
+    circuitId: Int,
+    onBackClick: () -> Unit = {}
 ) {
     val circuit = CircuitsData.circuits.find { it.id == circuitId }
 
@@ -32,7 +34,31 @@ fun CircuitDetailScreen(
         Scaffold(
             modifier = Modifier.fillMaxSize(),
             containerColor = Color.Transparent,
-            contentWindowInsets = WindowInsets(0, 0, 0, 0)
+            contentWindowInsets = WindowInsets(0, 0, 0, 0),
+            topBar = {
+                TopAppBar(
+                    title = {
+                        Text(
+                            text = circuit?.name ?: "Circuit Details",
+                            color = Color.White,
+                            style = MaterialTheme.typography.titleLarge,
+                            fontWeight = FontWeight.Bold
+                        )
+                    },
+                    navigationIcon = {
+                        IconButton(onClick = onBackClick) {
+                            Icon(
+                                imageVector = Icons.Default.ArrowBack,
+                                contentDescription = "Back",
+                                tint = Color.White
+                            )
+                        }
+                    },
+                    colors = TopAppBarDefaults.topAppBarColors(
+                        containerColor = Color.Transparent
+                    )
+                )
+            }
         ) { paddingValues ->
             if (circuit != null) {
                 Column(
@@ -79,10 +105,6 @@ private fun CircuitDetailContent(
         modifier = modifier
             .fillMaxWidth()
     ) {
-        Spacer(modifier = Modifier.height(16.dp))
-        CircuitHeader(circuit)
-        Spacer(modifier = Modifier.height(24.dp))
-
         CircuitMap(circuit)
         Spacer(modifier = Modifier.height(24.dp))
 
